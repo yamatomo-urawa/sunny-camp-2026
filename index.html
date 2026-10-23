@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFC107"><title>Sunny合宿｜夕食相談・ホテル飯？ 部屋パーティー？</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--yolk:#FFC528;--yolk-d:#FF9F1C;--yolk-l:#FFE082;--white:#FFFBEE;--white-edge:#FFF1C4;--pan:#1B1B1B;--pan-l:#3A3A3A;--bacon:#E63946;--herb:#52B788;--sky:#48BFE3;--pink:#FF6FB5;--ink:#1A1A1A;--sub:#5C5C5C;--bg:#FFF5D6}
+html,body{background:var(--bg);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","ヒラギノ角ゴ ProN W3","Hiragino Sans","Meiryo",sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{max-width:480px;margin:0 auto;padding:0 0 100px;background:radial-gradient(circle at 20% 5%,#FFEAA5 0%,transparent 40%),radial-gradient(circle at 80% 35%,#FFD9E8 0%,transparent 35%),radial-gradient(circle at 30% 80%,#C7F0DB 0%,transparent 40%),var(--bg);min-height:100vh}
+.hero{position:relative;padding:24px 16px 12px;text-align:center;overflow:hidden}
+.badge-top{display:inline-block;background:var(--pan);color:var(--yolk);font-size:10px;font-weight:700;letter-spacing:.2em;padding:5px 14px;border-radius:999px;margin-bottom:10px}
+.hero h1{font-size:23px;font-weight:900;letter-spacing:-.01em;line-height:1.3;color:var(--ink);margin-bottom:6px}
+.hero h1 .accent{color:var(--yolk-d);display:block;font-size:26px;margin-top:2px}
+.hero .sub{font-size:13px;color:var(--sub);margin-bottom:14px;font-weight:600;line-height:1.5}
+.hero .sub .key{color:var(--yolk-d);font-weight:800}
+.egg-wrap{position:relative;width:100%;aspect-ratio:1/1;max-width:300px;margin:0 auto;filter:drop-shadow(0 14px 20px rgba(255,159,28,.25))}
+.egg-svg{width:100%;height:100%;animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+.egg-stat{position:absolute;background:var(--pan);color:#fff;border-radius:14px;padding:5px 10px;font-weight:800;font-size:12px;box-shadow:0 6px 12px rgba(0,0,0,.18)}
+.egg-stat .n{display:block;font-size:18px;line-height:1;color:var(--yolk);margin-bottom:2px;font-feature-settings:"tnum"}
+.egg-stat .l{font-size:9px;letter-spacing:.1em;font-weight:600;opacity:.9}
+.egg-stat.s1{top:6%;right:-6px;transform:rotate(8deg)}
+.egg-stat.s2{bottom:8%;left:-10px;transform:rotate(-6deg)}
+.egg-stat.s3{top:48%;right:-14px;transform:rotate(4deg)}
+.sizzle{position:absolute;font-size:14px;font-weight:900;color:var(--yolk-d);opacity:.4;letter-spacing:.3em;pointer-events:none}
+.sz1{top:18%;left:-10px;transform:rotate(-15deg)}
+.sz2{top:38%;right:-6px;transform:rotate(20deg)}
+section{padding:24px 16px}
+.chapter-num{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.25em;color:var(--yolk-d);background:#fff;padding:4px 10px;border-radius:999px;margin-bottom:8px;box-shadow:0 2px 4px rgba(0,0,0,.06)}
+h2.sec-title{font-size:21px;font-weight:900;line-height:1.35;margin-bottom:10px;color:var(--ink);scroll-margin-top:60px}
+h2.sec-title .ic{display:inline-block;margin-right:6px;animation:wob 3s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(0)}50%{transform:rotate(-8deg)}}
+h3.sub-title{font-size:15px;font-weight:900;margin:18px 0 8px;color:var(--ink);padding-left:12px;border-left:4px solid var(--yolk);line-height:1.4}
+.lead{font-size:13.5px;line-height:1.9;margin-bottom:14px;color:var(--ink)}
+.lead p{margin-bottom:10px}
+.lead strong{font-weight:900;color:var(--yolk-d)}
+.lead .hl{background:linear-gradient(transparent 55%,var(--yolk-l) 55%,var(--yolk-l) 90%,transparent 90%);padding:0 2px;font-weight:700}
+.lead .red{color:var(--bacon);font-weight:700}
+.review{background:#fff;border-radius:16px;padding:14px;margin-bottom:10px;border:2px solid var(--white-edge);position:relative;box-shadow:0 3px 8px rgba(0,0,0,.04)}
+.review::before{content:"";position:absolute;top:-7px;left:14px;width:22px;height:22px;background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,var(--yolk) 13%,var(--yolk-d) 100%);border-radius:50%;box-shadow:0 2px 3px rgba(0,0,0,.15)}
+.review-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;margin-bottom:6px;padding-left:30px}
+.review-star{color:var(--yolk-d);font-weight:800;font-size:13px;letter-spacing:.05em}
+.review-author{font-weight:700;color:var(--ink);font-size:12px}
+.review-source{font-size:10px;background:var(--white-edge);padding:2px 7px;border-radius:6px;color:var(--sub);font-weight:600}
+.badges{display:flex;flex-wrap:wrap;gap:4px;padding-left:30px;margin-bottom:8px}
+.b{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:999px;line-height:1.5;letter-spacing:.02em}
+.b-count{background:#E3F2FD;color:#1565C0}
+.b-quality{background:#F3E5F5;color:#6A1B9A}
+.b-balanced{background:#E8F5E9;color:#2E7D32}
+.b-repeat{background:#FFF3E0;color:#E65100}
+.b-old{background:#ECEFF1;color:#455A64}
+.b-pet{background:#FFEBEE;color:#C62828}
+.b-foreign{background:#E0F7FA;color:#00695C}
+.review-body{font-size:12.5px;line-height:1.75;color:var(--ink);font-family:"Hiragino Mincho ProN","ヒラギノ明朝 ProN W3",serif}
+.review-body em{font-style:normal;background:linear-gradient(transparent 55%,var(--yolk-l) 55%,var(--yolk-l) 92%,transparent 92%);padding:0 1px;font-weight:600}
+.review-jp{background:linear-gradient(135deg,#FFFEF5 0%,#FFFAE0 100%);border-color:var(--yolk)}
+.review-en{background:linear-gradient(135deg,#F8F5FF 0%,#EAE6FA 100%);border-color:#9C89F0}
+.review-en::before{background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,#B0A0FF 13%,#7E69E0 100%)}
+.review-en .review-body{font-family:"Georgia","Hiragino Mincho ProN",serif}
+.review-neg{background:linear-gradient(135deg,#FFF5F0 0%,#FFE8DA 100%);border-color:#FFAB91}
+.review-pos{background:linear-gradient(135deg,#F0FAF4 0%,#D9F2E1 100%);border-color:#90D8A8}
+.stat-strip{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.stat-strip .s{flex:1;min-width:90px;background:#fff;border-radius:12px;padding:10px 8px;text-align:center;border:2px solid var(--white-edge);box-shadow:0 2px 4px rgba(0,0,0,.04)}
+.stat-strip .s .n{font-size:18px;font-weight:900;color:var(--yolk-d);line-height:1.1;font-feature-settings:"tnum";margin-bottom:3px}
+.stat-strip .s .l{font-size:10px;color:var(--sub);font-weight:600;line-height:1.3}
+.stars-grid{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.star-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700}
+.star-row .lbl{width:34px;color:var(--yolk-d);font-size:13px}
+.star-row .bar{flex:1;height:16px;background:var(--white-edge);border-radius:999px;overflow:hidden;position:relative}
+.star-row .fill{height:100%;border-radius:999px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;color:#fff;font-size:10px;font-weight:800;transition:width 1s ease-out}
+.star-row .fill.f5{background:linear-gradient(90deg,#FFB300,#FF8F00)}
+.star-row .fill.f4{background:linear-gradient(90deg,#FFC107,#FFA000)}
+.star-row .fill.f3{background:linear-gradient(90deg,#A1D99B,#52B788)}
+.star-row .fill.f2{background:linear-gradient(90deg,#FFAB91,#FF7043)}
+.star-row .fill.f1{background:linear-gradient(90deg,#EF5350,#C62828)}
+.star-row .pct{font-size:10px;color:var(--sub);width:34px;text-align:right}
+.callout{background:var(--pan);color:#FFF8E7;border-radius:18px;padding:14px;margin:14px 0;position:relative;overflow:hidden}
+.callout::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,197,40,.15) 0%,transparent 60%);pointer-events:none}
+.callout h4{color:var(--yolk);font-size:14px;font-weight:900;margin-bottom:6px;position:relative}
+.callout p{font-size:12.5px;line-height:1.8;color:#FFF8E7;position:relative;margin-bottom:8px}
+.callout p:last-child{margin-bottom:0}
+.callout p strong{color:var(--yolk);font-weight:800}
+.callout-warm{background:linear-gradient(135deg,#FFF1C4 0%,#FFE082 100%);color:var(--ink);border:2px solid var(--yolk)}
+.callout-warm::before{background:radial-gradient(circle at 80% 20%,rgba(255,159,28,.2) 0%,transparent 60%)}
+.callout-warm h4{color:var(--yolk-d)}
+.callout-warm p{color:var(--ink)}
+.callout-warm p strong{color:var(--yolk-d)}
+.menu-btn{position:fixed;bottom:18px;right:16px;width:56px;height:56px;border-radius:50%;background:var(--pan);color:var(--yolk);border:3px solid var(--yolk);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3);cursor:pointer;z-index:100;line-height:1;transition:transform .25s}
+.menu-btn:active{transform:scale(.9)}
+.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;display:none;align-items:flex-end;justify-content:center}
+.menu-overlay.on{display:flex}
+.menu-panel{background:#fff;width:100%;max-width:480px;max-height:80vh;border-radius:24px 24px 0 0;padding:18px 16px 24px;overflow-y:auto;animation:slideup .3s}
+@keyframes slideup{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.menu-panel h4{font-size:16px;font-weight:900;color:var(--yolk-d);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.menu-panel h4 .close{font-size:22px;color:var(--pan);background:var(--yolk-l);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.menu-panel ol{list-style:none;counter-reset:c;padding:0}
+.menu-panel li{counter-increment:c;padding:0;border-bottom:1px dashed var(--white-edge)}
+.menu-panel li:last-child{border:none}
+.menu-panel a{display:block;font-size:13px;padding:11px 0 11px 32px;position:relative;color:var(--ink);text-decoration:none;font-weight:600;line-height:1.4}
+.menu-panel a::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:50%;transform:translateY(-50%);font-size:11px;font-weight:900;color:var(--yolk-d);background:var(--yolk-l);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+details{background:#fff;border-radius:16px;padding:0;margin-bottom:10px;border:2px solid var(--white-edge);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+summary{padding:13px;font-size:13px;font-weight:800;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▼";font-size:10px;color:var(--yolk-d);transition:transform .3s}
+details[open] summary::after{transform:rotate(180deg)}
+details .body{padding:0 13px 13px;font-size:12px;line-height:1.8;color:var(--sub)}
+.verdict{background:linear-gradient(135deg,var(--pan) 0%,#2D2D2D 100%);color:#FFF8E7;border-radius:20px;padding:18px;margin-top:18px;border:3px solid var(--yolk);position:relative;overflow:hidden}
+.verdict::before{content:"VERDICT";position:absolute;top:8px;right:12px;font-size:9px;letter-spacing:.3em;color:var(--yolk);font-weight:800;opacity:.6}
+.verdict h3{color:var(--yolk);font-size:17px;font-weight:900;margin-bottom:8px}
+.verdict p{font-size:13px;line-height:1.8;color:#FFF8E7;margin-bottom:8px}
+.verdict p strong{color:var(--yolk)}
+.verdict .pros,.verdict .cons{margin-top:10px;padding:10px;background:rgba(255,255,255,.05);border-radius:10px;font-size:12px;line-height:1.75}
+.verdict .pros strong{color:#7DD589}
+.verdict .cons strong{color:#FF8A65}
+.plan-card{background:#fff;border-radius:18px;padding:14px;margin-bottom:12px;border:2px solid var(--yolk);position:relative;box-shadow:0 4px 10px rgba(255,159,28,.15)}
+.plan-card.plan-pan{background:var(--pan);color:#FFF8E7;border-color:var(--pan-l)}
+.plan-card.plan-pan .plan-name{color:var(--yolk)}
+.plan-card.plan-pan .plan-desc{color:#FFF8E7}
+.plan-tag{display:inline-block;font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--yolk);color:var(--pan);letter-spacing:.05em;margin-bottom:6px}
+.plan-name{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:4px;line-height:1.3}
+.plan-name .price{color:var(--yolk-d);font-size:14px;display:block;margin-top:3px}
+.plan-desc{font-size:12.5px;color:var(--ink);line-height:1.75}
+.plan-spec{margin-top:8px;padding:8px;background:var(--white-edge);border-radius:10px;font-size:11.5px;line-height:1.6;color:var(--ink)}
+.plan-pan .plan-spec{background:rgba(255,197,40,.12);color:#FFF8E7}
+.plan-room-grid{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 14px}
+.plan-room{background:#fff;border-radius:12px;padding:11px;border:2px solid var(--white-edge);font-size:12px;line-height:1.6}
+.plan-room .rname{font-weight:900;color:var(--yolk-d);font-size:13px;display:block;margin-bottom:3px}
+.plan-room .rspec{color:var(--sub);font-size:11px;display:block;margin-top:3px}
+.method-card{background:#fff;border-radius:18px;padding:16px;margin-bottom:10px;border:2px dashed var(--herb);box-shadow:0 3px 8px rgba(82,183,136,.1)}
+.method-card h4{font-size:14px;font-weight:900;color:var(--herb);margin-bottom:8px}
+.method-card .row{display:flex;gap:8px;margin-bottom:6px;font-size:12px;line-height:1.6}
+.method-card .row .ic{flex-shrink:0;width:22px;height:22px;background:var(--white-edge);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.method-card .row .ic.ok{background:#C7F0DB;color:#2D6A4F}
+.method-card .row .ic.ng{background:#FFDAD6;color:#B71C1C}
+.method-card .row .ic.up{background:#FFE0B2;color:#E65100}
+.full-review{background:#fff;border-radius:10px;padding:10px 12px;margin-bottom:6px;border:1px solid var(--white-edge);font-size:11.5px;line-height:1.7}
+.full-review .fr-meta{display:flex;gap:6px;align-items:center;margin-bottom:3px;flex-wrap:wrap}
+.full-review .fr-star{color:var(--yolk-d);font-weight:800;font-size:11px}
+.full-review .fr-name{font-weight:700;color:var(--ink);font-size:11px}
+.full-review .fr-body{color:var(--sub);line-height:1.65;font-size:11px}
+.full-review .fr-body em{font-style:normal;background:var(--yolk-l);padding:0 1px}
+.full-review.fr-1{border-left:3px solid #C62828}
+.full-review.fr-2{border-left:3px solid #FF7043}
+.full-review.fr-3{border-left:3px solid #52B788}
+.full-review.fr-4{border-left:3px solid #FFA000}
+.full-review.fr-5{border-left:3px solid #FF8F00}
+.fry{margin:30px 16px 0;padding:18px 16px 22px;background:var(--pan);border-radius:24px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.fry::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,197,40,.15) 0%,transparent 60%)}
+.fry h3{font-size:16px;font-weight:900;margin-bottom:8px;position:relative;color:var(--yolk)}
+.fry p{font-size:11px;line-height:1.7;opacity:.85;position:relative}
+
+
+html,body{overflow-x:clip}
+a{color:#875000;text-underline-offset:3px;overflow-wrap:anywhere}
+button,input,textarea{font:inherit}button{cursor:pointer}
+.hero .egg-wrap{max-width:240px}.hero .sub{margin-bottom:0}
+.hero .egg-stat.s1{right:0}.hero .egg-stat.s3{right:-2px}
+.hero h1 .accent{font-size:28px}.lead strong{color:#975400}
+.plan-name .price,.stat-strip .s .n,.chapter-num{color:#8a5100}
+.review-body{font-family:inherit;font-size:13px}.review-meta{padding-left:24px}
+.review-source{font-size:11px}.callout-warm h4,.callout-warm p strong{color:#7b4600}
+.proposal{display:inline-block;background:#FFE8DA;color:#9c3419;border:1px solid #f1c4af;border-radius:99px;padding:4px 12px;font-weight:800;font-size:12px}
+.quick-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.quick-links a{background:white;border:2px solid var(--white-edge);border-radius:30px;padding:7px 12px;font-weight:800;font-size:12px;text-decoration:none;color:var(--ink)}
+.progress-shell{background:#fff8e8;border-bottom:2px solid var(--white-edge);padding:9px 16px 7px}
+.progress-line{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;gap:6px;padding-right:64px}
+.progress-line button{border:1px solid #d8c58d;background:white;border-radius:20px;padding:7px 11px;font-size:12px;min-height:36px;color:var(--ink)}
+.progress-line button[aria-pressed="true"]{background:var(--pan);color:var(--yolk)}
+progress{display:block;width:100%;height:7px;margin-top:6px;accent-color:var(--herb)}
+section{scroll-margin-top:92px}.small{font-size:11.5px;color:var(--sub);line-height:1.75}
+.check-group summary{font-size:14px;min-height:52px}.group-count{margin-left:auto;font-size:11px;color:var(--sub);white-space:nowrap}
+.group-desc{padding:0 13px 12px;font-size:12px;color:var(--sub)}
+.check-row{display:flex;gap:11px;align-items:flex-start;padding:14px 13px;border-top:1px dashed #e5d9b5;cursor:pointer}
+.check-row input{width:23px;height:23px;flex:0 0 23px;margin-top:3px;accent-color:#367953}
+.check-text{min-width:0;display:block;flex:1}.item-title{display:block;font-size:14px;font-weight:800;line-height:1.5}
+.qty{display:block;font-size:13px;color:#885000;font-weight:800;margin-top:3px}
+.item-note{display:block;font-size:12px;color:var(--sub);line-height:1.7;margin-top:4px}
+.check-row.done{background:#edf6ef}.check-row.done .item-title{text-decoration:line-through;color:#487655}
+.owner{display:inline-block;background:#e8f5e9;color:#28633a;border-radius:5px;padding:1px 6px;font-size:10px;margin-left:3px}.opt{display:inline-block;font-size:10px;border:1px solid #ddd;border-radius:5px;padding:0 5px;color:#666;vertical-align:middle}
+.empty{padding:12px;font-size:13px;color:#367953}.check-row[hidden]{display:none}
+.link-buttons{display:grid;gap:8px;margin-top:12px}.link-buttons a{display:block;border:1px solid #d5c391;border-radius:10px;background:#fffaf0;padding:11px;font-size:12px;font-weight:700;text-decoration:none;color:#754300}
+.flow{display:grid;gap:8px;margin:12px 0}.flow p{padding:11px 12px;background:#fff;border:2px solid var(--white-edge);border-radius:12px;font-size:13px}
+.flow b{color:#875000}.budget{width:100%;border-collapse:collapse;font-size:12px}.budget td{padding:9px 3px;border-bottom:1px dashed #dfd1aa}.budget td:last-child{text-align:right;white-space:nowrap;font-weight:800}
+.budget .total td{font-size:15px;color:#814800;border-top:2px solid var(--yolk)}
+textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-radius:12px;padding:12px;background:#fff;font-size:16px;color:var(--ink)}
+.utilities{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.utilities button{border:1px solid #cdbd92;border-radius:10px;background:white;padding:10px 12px;font-size:12px;min-height:44px}
+.source-list{padding-left:18px;font-size:12px}.source-list li{margin:8px 0}.fry a{color:var(--yolk-l)}
+.menu-panel h4 .close{border:0;cursor:pointer}.menu-panel a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #2678b1;outline-offset:3px}
+.noscript{padding:12px;background:#fff}.save-status{font-size:10px;color:var(--sub);margin-top:3px}
+.decision-grid{display:grid;gap:14px}.decision-grid .plan-card{margin:0}.decision-price{font-size:22px;font-weight:800;color:#875000;margin:10px 0}
+.reference-wrap{margin:18px 16px;border:1px solid #dbc994;border-radius:16px;background:#fffaf0;overflow:hidden}
+.reference-wrap>summary{padding:18px 14px;min-height:60px;font-weight:800;cursor:pointer}.reference-wrap>summary small{display:block;font-size:12px;font-weight:400;color:var(--sub);margin-top:5px}
+.reference-wrap section{padding-left:14px;padding-right:14px}.reference-wrap .chapter-num{display:none}
+.reference-wrap .sec-title{font-size:20px}.choice-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px;margin:16px 0}
+.choice-table th,.choice-table td{padding:10px 6px;vertical-align:top;border-bottom:1px solid #dfd1aa;text-align:left;overflow-wrap:anywhere}.choice-table th:first-child{width:20%}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+@media print{body{max-width:none;background:white;padding:0}.progress-shell,.menu-btn,.menu-overlay,.utilities,.quick-links{display:none!important}section{padding:12px}.hero .egg-wrap{display:none}details{break-inside:auto}.check-row{break-inside:avoid}.check-row[hidden]{display:flex}.callout,.fry{background:white;color:black}.callout p,.fry p{color:black}}
+</style></head><body>
+<header class="hero"><span class="badge-top">SUNNY SIDE UP '90</span>
+<h1>Sunny合宿<span class="accent">今年の夕食、どうする？</span></h1>
+<p class="sub">2026年11月7日（土）・ラフォーレ修善寺<br>夕食の選択肢を見て、みんなで決めよう。</p>
+<div class="egg-wrap" aria-hidden="true"><svg class="egg-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="white" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#FFFEF0"/><stop offset="70%" stop-color="#FFF8E0"/><stop offset="100%" stop-color="#FFEFCC"/></radialGradient>
+        <radialGradient id="yolk" cx="40%" cy="35%" r="60%"><stop offset="0%" stop-color="#FFE680"/><stop offset="40%" stop-color="#FFC528"/><stop offset="100%" stop-color="#FF8F00"/></radialGradient>
+        <filter id="bumpy"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+      </defs>
+      <path d="M 60,170 C 50,110 110,55 175,55 C 240,55 290,90 295,150 C 300,205 275,265 220,285 C 175,300 115,295 80,260 C 50,225 65,205 60,170 Z" fill="url(#white)" filter="url(#bumpy)"/>
+      <ellipse cx="240" cy="100" rx="35" ry="22" fill="url(#white)" opacity=".9" transform="rotate(-15 240 100)"/>
+      <ellipse cx="85" cy="245" rx="32" ry="20" fill="url(#white)" opacity=".9" transform="rotate(20 85 245)"/>
+      <ellipse cx="165" cy="160" rx="78" ry="73" fill="url(#yolk)"/>
+      <ellipse cx="140" cy="135" rx="22" ry="14" fill="#FFFCE0" opacity=".55"/>
+      <ellipse cx="135" cy="128" rx="9" ry="5" fill="#FFFEF5" opacity=".8"/>
+      <circle cx="190" cy="190" r="2" fill="#1A1A1A"/><circle cx="100" cy="120" r="1.5" fill="#1A1A1A"/><circle cx="260" cy="200" r="1.8" fill="#1A1A1A"/><circle cx="220" cy="260" r="1.3" fill="#1A1A1A"/><circle cx="70" cy="180" r="1.5" fill="#1A1A1A"/>
+    </svg>
+<div class="egg-stat s1"><span class="n">7人</span><span class="l">今年も集合</span></div>
+<div class="egg-stat s2"><span class="n">11 / 7</span><span class="l">土曜日の夜</span></div>
+<div class="egg-stat s3"><span class="n">夜飯相談</span><span class="l">希望を聞かせて</span></div></div>
+<span class="proposal">ホテル飯も部屋パーティーも・希望募集中</span>
+<nav class="quick-links" aria-label="夕食の相談"><a href="#choice">2つの案を比較</a><a href="#dining">ホテル飯</a><a href="#proposal">部屋パーティー</a><a href="#discussion">希望を伝える</a></nav>
+</header>
+<noscript><p class="noscript">チェックの保存と目次メニューにはJavaScriptが必要です。買い物リストはそのまま読めます。</p></noscript>
+<main><section id="choice"><span class="chapter-num">CHAPTER 01</span><h2 class="sec-title">今年の夕食、どちらにしよう？</h2>
+<p class="lead">今回まず相談したいのは、<strong>夕食をホテルで食べるか、部屋で刺し盛と鍋を囲むか</strong>。どちらも候補です。みんなの希望を聞いてから決めましょう。</p>
+<div class="decision-grid">
+<div class="plan-card"><span class="plan-tag">ホテル飯</span><h3 class="plan-name">料理と片付けはお店にお任せ</h3><p class="decision-price">食事 7,500円〜／人</p><p class="plan-desc">FUJIのコース、マリオットのグリル料理。食後は部屋で、乾きものと酒を囲んで飲む形です。</p><div class="plan-spec">夕食時の飲み物と、部屋用の乾きもの・酒代は別。<strong>刺し盛も鍋も用意しません。</strong></div><div class="link-buttons"><a href="#dining">ホテルのメニュー・料金・口コミを見る ↓</a></div></div>
+<div class="plan-card"><span class="plan-tag">部屋パーティー</span><h3 class="plan-name">魚梅の刺し盛＋牛・豚の鍋</h3><p class="decision-price">約5,900円／人の仮予算</p><p class="plan-desc">刺し盛を頼み、好きな味の鍋と好きな酒でゆっくり。IH・鍋・肉や野菜・道具類は山之内が準備する案です。</p><div class="plan-spec">食べ物・酒・水類・消耗品込みの試算。片付けとゴミの持ち帰りは分担。レンジのレンタル代等は別です。</div><div class="link-buttons"><a href="#proposal">部屋の条件・料理・分担を見る ↓</a></div></div>
+</div>
+<table class="choice-table"><caption class="small">選ぶときに違うところ</caption><thead><tr><th>比較</th><th>ホテル飯</th><th>部屋パーティー</th></tr></thead><tbody><tr><th>食事</th><td>お店のコース・グリル料理</td><td>魚梅の刺し盛と鍋</td></tr><tr><th>酒</th><td>夕食時は店で注文。部屋用は持参</td><td>希望を聞いて買い出し</td></tr><tr><th>準備</th><td>店・コースを決めて予約</td><td>食材や道具を持参、片付けを分担</td></tr><tr><th>条件</th><td>空席と予約条件を確認</td><td>キッチンなし・自炊禁止の部屋</td></tr></tbody></table>
+<p class="small">ホテル飯は公式の食事料金、部屋パーティーは酒等を含む仮予算で、含むものが違います。詳しい条件はそれぞれの案に記載しています。</p>
+</section><section id="dining"><span class="chapter-num">CHAPTER 02</span><h2 class="sec-title">ホテル飯：レストランの候補</h2>
+<div class="lead"><p>夕食は、敷地内の<strong>マリオットのレストラン、ラフォーレのダイニングFUJI</strong>から選ぶこともできます。まずは料理と料金を見て、みんなの希望を聞きたいと思います。</p></div>
+<div class="callout callout-warm"><h4>11月7日の営業・予約について</h4><p>マリオットとFUJIは、<strong>11月7日を含む秋の夕食メニュー</strong>が公式に掲載されています。席の空きは未確認です。夕食ビュッフェの当日開催は確認できていないため、下記は公式に掲載されたコース等で比較しています。</p></div>
+<div class="plan-card"><span class="plan-tag">選択肢①・伊豆マリオットホテル修善寺</span><h3 class="plan-name">Grill &amp; Dining G<span class="price">秋のグリルディナー 8,500円〜／人</span></h3><p class="plan-desc">グリル料理を楽しむホテルのレストラン。<strong>15,000円のプランだけでなく、8,500円からの秋ディナーもあります。</strong>料理の準備や片付けをせず、ゆっくり食事をするならこちらも候補です。</p>
+<table class="budget"><caption class="small">2026年9月1日〜11月30日の公式掲載プラン</caption><tbody><tr><td>IZU Grill Dinner Autumn</td><td>8,500円〜／人</td></tr><tr><td>Autumn Share Dinner</td><td>15,000円／人</td></tr></tbody></table>
+<p class="small">税込・サービス料込、酒代別。グリルディナーは主菜により追加料金あり。シェアディナーは2人以上・3日前までの予約、ペアリングビールは別料金。夕食17:30〜21:00。8,500円なら7人で59,500円＋飲み物。</p>
+<div class="link-buttons"><a href="https://www.laforet.co.jp/lf-zmh/restaurant/" target="_blank" rel="noopener noreferrer">マリオット・公式レストラン案内とメニュー ↗</a></div>
+<h4 class="sub-title">前回調査の口コミから</h4>
+<blockquote class="review-body">「素材の良さを活かした調理。火入れもちょうどよかった。」</blockquote><p class="small">Richard.Guan／食べログ・2025年12月の投稿として保存</p>
+<blockquote class="review-body">「ディナーはやや割高。ホテル利用の利便性が利点。」</blockquote><p class="small">takeZ／食べログ・2025年10月の投稿として保存</p>
+<p class="plan-desc">焼き加減を評価する声がある一方、料金を高めと感じる声もあります。</p><p class="small"><a href="https://tabelog.com/shizuoka/A2205/A220504/22032203/dtlrvwlst/" target="_blank" rel="noopener noreferrer">Grill &amp; Dining G・食べログの口コミ一覧 ↗</a></p></div>
+<div class="plan-card"><span class="plan-tag">選択肢②・ホテルラフォーレ修善寺</span><h3 class="plan-name">ダイニングFUJI<span class="price">秋の夕食コース 7,500円〜／人</span></h3><p class="plan-desc">落ち着いてコース料理を食べる案です。11月7日は秋メニューの掲載期間内。料理のグレードを予算に合わせて選べます。</p>
+<table class="budget"><caption class="small">2026年9月1日〜11月30日の公式掲載コース</caption><tbody><tr><td>秋雅 −MIYABI−</td><td>7,500円／人</td></tr><tr><td>秋極 −KIWAMI−</td><td>9,900円／人</td></tr><tr><td>秋プレミア −Premier−</td><td>12,100円／人</td></tr></tbody></table>
+<p class="small">税込・サービス料込、酒代別。夕食17:30〜21:00。プレミアは3日前までの予約。雅なら7人52,500円＋飲み物。</p>
+<div class="link-buttons"><a href="https://www.laforet.co.jp/lf-shuzenji/restaurant/" target="_blank" rel="noopener noreferrer">ラフォーレ・公式レストラン案内とメニュー ↗</a></div>
+<h4 class="sub-title">前回調査の口コミから</h4>
+<blockquote class="review-body">「コースのご飯も桜モチーフで可愛らしかったです。」</blockquote><p class="small">ぐりぐりぐるみ／楽天トラベル・2026年5月の投稿として保存</p>
+<blockquote class="review-body">「朝夕何か目玉料理があると更にテンションが上がると思います。」</blockquote><p class="small">itoking1678／楽天トラベル・2026年4月の投稿として保存</p>
+<p class="plan-desc">季節感のあるコースを楽しんだ声と、目玉になる料理が欲しいという声の両方があります。</p><p class="small"><a href="https://travel.rakuten.co.jp/HOTEL/67933/review.html" target="_blank" rel="noopener noreferrer">ラフォーレ修善寺・楽天トラベルの口コミ一覧 ↗</a></p></div>
+<p class="small">口コミは2026年6月の前回調査で保存した資料からの短い抜粋です。今回、原投稿の再確認はしていません。利用時期・料理が異なり、現在の秋メニューの評価ではありません。ラフォーレの宿泊口コミは、投稿中に会場名がないものも含みます。</p>
+<div class="callout"><h4>ホテルで食べるなら、部屋は乾きものと酒で</h4><p>上のレストランで夕食を取る場合は、<strong>刺し盛も鍋も注文・準備しません。</strong>買っていくのは、食後の部屋飲み用の乾きものと酒だけ。ホテル飯がよければ、この形でいきましょう。</p></div>
+</section><section id="proposal"><span class="chapter-num">CHAPTER 03</span><h2 class="sec-title">部屋パーティー：刺し盛と鍋</h2>
+<div class="callout callout-warm" style="text-align:left;margin:14px 0"><h4>部屋の設備と条件</h4><p><strong>冷蔵庫・電気ポットあり。電子レンジはありません。</strong><br>酒用の氷はホテルにあります。<br>部屋にはキッチン等がなく、自炊禁止の様ですが、別棟で車のすぐ前が建物なので、バレずにできると思います（笑）</p><p>部屋飲みを無理に推すつもりはなく、<strong>ホテル飯がよければ、それでもOK</strong>。みんなの希望を聞いて決めましょう。</p></div>
+<div class="lead"><p><strong>自炊案なら、魚梅の刺し盛を必ず入れて、牛・豚の鍋で部屋飲み</strong>。鍋はキムチ味と〆のうどんがいまの仮案です。ホテルで夕食を取る場合は刺し盛も鍋も用意せず、部屋飲み用に乾きものと酒だけを買っていきます。</p></div>
+<div class="callout callout-warm"><h4>部屋飲みをゴリ押しするつもりはありません</h4><p><strong>ホテル飯がよければ、それでもOKです。</strong>みんなの希望を聞いて決めましょう。<strong>ホテルで夕食を取る場合は、刺し盛も鍋もなし。買っていくのは乾きものと酒だけです。</strong></p></div>
+<div class="method-card"><h4>鍋の味・酒の種類、リクエスト募集！</h4><p class="plan-desc">鍋はキムチ、寄せ鍋、ごま豆乳、塩ちゃんこなど、食べたい味や具を教えてください。辛いものが苦手な人も遠慮なく。<strong>日本酒はどんちゃん・河本にお任せ。</strong>ウイスキー・ビール・酎ハイなど、ほかに飲みたい酒があればぜひ。<strong>希望は山之内へ連絡してください。</strong></p><p class="small">下のウイスキー候補は、あくまでAIの推しです。みんなの好みを聞いて選び直します。</p></div>
+<div class="method-card"><h4>決まっている分担・ホテルの設備</h4><p class="plan-desc"><strong>山之内：</strong>部屋飲み・鍋を採用する場合の準備担当。IH調理器・対応鍋、OKの肉・野菜・希望を聞いて選ぶ鍋つゆ、100円ショップ等の道具・食器・カトラリーを用意して持参。<br><strong>原山：</strong>山之内の車に同乗。<br><strong>ホテル：</strong>酒用の氷あり。部屋には冷蔵庫・電気ポットあり、電子レンジなし。</p></div>
+<div class="plan-card"><span class="plan-tag">みんなへ・電子レンジの持参者募集</span><h3 class="plan-name">小さい単機能レンジ、持って来られる人がいれば助かります</h3><p class="plan-desc">山之内と原山の家には、大きいものしかありません。持参できる人がいなければ、レンタルするか、温めはあきらめる（笑）。鍋はIHで作り、枝豆は自然解凍。レンジなしでも夕食は組めます。</p></div>
+<div class="plan-card"><span class="plan-tag">自炊案なら刺し盛は必須・注文はこれから</span><h3 class="plan-name">修善寺駅前・魚梅の刺し盛<span class="price">希望予算 2,000円／人 × 7人＝14,000円</span></h3><p class="plan-desc">地元の紹介記事では、集まりの際に刺し盛を頼む店として紹介されています。口コミにも鮮度や、予算に応じた盛り合わせへの好評があります。自炊案に決まったら、刺し盛はこちらに頼む予定です。魚の種類と盛り付けは、お店に相談して決める予定です。</p>
+<div class="link-buttons"><a href="https://tabelog.com/shizuoka/A2205/A220504/22031614/dtlrvwlst/B266449335/?type=0" target="_blank" rel="noopener noreferrer">食べログの口コミを読む ↗</a><a href="https://note.com/kotouda/n/n62867c872750" target="_blank" rel="noopener noreferrer">地元からの紹介記事を読む ↗</a></div></div>
+<div class="callout"><h4>お店の料理＋自宅の下ごしらえで</h4><p><strong>自炊案の場合は、刺身は魚梅、鍋の肉・野菜は切って持参。</strong>現地では並べる・温める・煮るだけにして、後片付けまで分担する案です。</p></div>
+</section><section id="drinks"><span class="chapter-num">CHAPTER 04</span><h2 class="sec-title">酒の希望も聞かせてください</h2>
+<p class="lead">缶の酒は、どんちゃんを含む<strong>7人全員分で350ml×3本＝21本</strong>。日本酒は<strong>どんちゃん・河本にお任せ</strong>。銘柄・量・準備を2人にお願いします。ウイスキー700mlを1本は、別枠の共用分として置く仮案です。</p>
+<p class="lead">日本酒以外の酒は希望を募ります。<strong>好きなウイスキー・ビール・酎ハイなどがあれば、山之内へ教えてください。</strong>ホテル飯なら、夕食中の酒とは別に部屋で飲む分を調整します。</p>
+<details><summary>AIのウイスキー候補・推す理由・代替案を見る</summary><div class="body">
+<div class="callout callout-warm"><h4>ここからの銘柄は、あくまでAIの推し</h4><p><strong>デュワーズは、AIが商品説明をもとに選んだ仮候補です。</strong>山之内や参加者が指定した酒ではありません。AIはみんなの好みをまだ知らないので、好きな銘柄のリクエストを優先します。</p></div>
+<div class="plan-card plan-pan"><span class="plan-tag">AIのウイスキー案・推す理由</span><h3 class="plan-name">デュワーズ12年・700ml</h3><p class="plan-desc">公式説明では、ハチミツや果実を思わせる香りとなめらかさが特徴。AIは、ハイボールでも香りを楽しめて、集まりの一杯に少し変化を付けられそうだと考えて選びました。予算枠は3,000円程度。飲み慣れた角瓶などが好みなら、そちらに替えましょう。</p><div class="plan-spec">1杯の目安：ウイスキー30ml＋炭酸水120ml＋氷。700mlで約23杯分、炭酸水は最大約2.8Lなので、500mlを6本用意。これはボトルの容量計算で、飲み切る予定杯数ではありません。</div><p class="small"><a style="color:#FFE082" href="https://www.dewars-jp.com/lineup/dewars_12years.html" target="_blank" rel="noopener noreferrer">デュワーズ12年・公式商品紹介 ↗</a></p></div>
+<h3 class="sub-title">代替案もあります</h3>
+<div class="plan-card"><span class="plan-tag">ウイスキー・定番のハイボールなら</span><h3 class="plan-name">サントリー角瓶・700ml</h3><p class="plan-desc">甘い香り、コク、ドライな後口が特徴で、メーカーもハイボール向きの味づくりを説明しています。AIからは、いつもの角ハイが好きな人向けの代替案。デュワーズ1本と置き換えます。</p><p class="small"><a href="https://www.suntory.co.jp/whisky/kakubin/product/kaku.html" target="_blank" rel="noopener noreferrer">角瓶・公式商品説明 ↗</a></p></div>
+<div class="method-card"><h4>ボトルを買わず、缶ハイボールに替える案も</h4><p class="plan-desc">作る手間を減らしたければ、缶21本の一部をハイボールに変更する案もあります。その場合はウイスキーボトルを省き、炭酸水の量も見直します。日本酒はどんちゃん・河本にお任せします。</p><p class="small">代替案は追加購入分ではなく、置き換え候補。現地の在庫と価格は未確認で、銘柄が変われば予算も調整します。</p></div>
+</div></details>
+<div class="method-card"><h4>酒用の氷・冷蔵庫はホテルにあり</h4><p class="plan-desc">氷は購入リストから外しました。ホテルの氷を蓋付き容器に移して使います。到着後の食材・酒は冷蔵庫へ。移動中は山之内の保冷バッグと強力保冷材を使います。</p></div>
+</section><section id="discussion"><span class="chapter-num">CHAPTER 05</span><h2 class="sec-title">まず決めたいこと</h2>
+<div class="callout callout-warm"><h4>ホテル飯か、部屋パーティーか</h4><p>まずは<strong>どちらがいいか、山之内へ連絡してください。</strong>ホテル飯なら気になる店やコースも。部屋パーティーなら、鍋の味や具の希望も聞かせてください。</p><p>日本酒はどんちゃん・河本にお任せ。ほかの酒のリクエストはどちらの案でも歓迎です。<strong>ここではまだ提案段階。希望を集めてから、予約や買い出しを進めます。</strong></p></div>
+<p class="lead">部屋パーティー案の準備は、山之内が食材・IH・鍋・道具類を担当します。小型レンジを持参できる人がいれば助かります。細かな数量や持ち物は、下の参考メモにまとめました。</p>
+</section><details class="reference-wrap" id="reference"><summary>参考：部屋パーティーに決めた場合の準備メモ<small>買い物の数量・道具・片付け・予算内訳。必要になったら開いてください。</small></summary><div class="progress-shell"><div class="progress-line"><span id="count" aria-live="polite">準備リスト</span><button id="filter" aria-pressed="false" type="button">未完了だけ</button></div><progress id="progress" value="0" max="100" aria-label="準備済みの割合"></progress><p id="save-status" class="save-status">この端末に自動保存</p></div><section id="menu-food"><span class="chapter-num">CHAPTER 06</span><h2 class="sec-title">作るもの・食べ物の買い出し</h2>
+<div class="stat-strip"><div class="s"><div class="n">刺身</div><div class="l">魚梅・7人前</div></div><div class="s"><div class="n">牛＋豚</div><div class="l">鍋の味は希望募集</div></div><div class="s"><div class="n">うどん</div><div class="l">〆に4玉</div></div></div>
+<p class="lead">下記は自炊案を採用した場合の買い物リストです。ホテル飯の場合は刺し盛・鍋の食材・ピザ等を買わず、乾きものと酒だけを用意します。鍋は牛・豚に白菜・長ねぎ・キノコ・豆腐。味はリクエストを聞いて決めます。つまみは枝豆と漬物、食後にみかんとチョコ。ピザはレンジを用意する場合に、M1枚を追加する候補です。</p>
+<details class="check-group" id="group-reserve"><summary><span>魚梅で予約・受け取り</span><span class="group-count"></span></summary>
+    <div class="group-desc">自炊案を選ぶ場合は、魚梅の刺し盛を必ず入れます。ホテル飯の場合は注文しません。注文はこれから。2,000円は1人分の希望予算で、店の定額商品として確認した価格ではありません。</div><div class="rows"><label class="check-row" for="reserve-0">
+        <input type="checkbox" id="reserve-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">刺し盛を予約</span>
+        <span class="qty">7人分・合計14,000円 </span><span class="item-note">11/7の受取時刻、税込総額、魚の内容、しょうゆ・わさびの有無を確認。鍋もあると伝える。</span></span></label><label class="check-row" for="reserve-1">
+        <input type="checkbox" id="reserve-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">盛り付け容器と保冷箱を合わせる</span>
+        <span class="qty">2皿程度に分ける案 </span><span class="item-note">皿の縦・横を聞き、保冷箱に水平に入るか確認。</span></span></label><label class="check-row" for="reserve-2">
+        <input type="checkbox" id="reserve-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">当日、刺し盛を受け取る</span>
+        <span class="qty">予約した7人分 </span><span class="item-note">受け取ったら保冷。買い物の最後に回れるよう、受取時間を調整。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-homefood"><summary><span>山之内がOKなどで買い、下ごしらえ</span><span class="group-count"></span></summary>
+    <div class="group-desc">肉・野菜・鍋つゆ等は山之内が購入・下ごしらえして持参。肉は小分け冷凍、野菜は切って冷蔵し、現地では包丁・まな板を使わない段取りです。</div><div class="rows"><label class="check-row" for="homefood-0">
+        <input type="checkbox" id="homefood-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">牛薄切り肉</span>
+        <span class="qty">500g <span class="owner">山之内</span></span><span class="item-note">食べやすく切り、250gずつ平たく冷凍。</span></span></label><label class="check-row" for="homefood-1">
+        <input type="checkbox" id="homefood-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">豚薄切り肉</span>
+        <span class="qty">700g <span class="owner">山之内</span></span><span class="item-note">食べやすく切って小分け冷凍。牛とは別袋。</span></span></label><label class="check-row" for="homefood-2">
+        <input type="checkbox" id="homefood-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">白菜</span>
+        <span class="qty">大¼株／小½株・約800g〜1kg <span class="owner">山之内</span></span><span class="item-note">洗って水気を切る。芯と葉を分けて袋へ。</span></span></label><label class="check-row" for="homefood-3">
+        <input type="checkbox" id="homefood-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">長ねぎ</span>
+        <span class="qty">2本 <span class="owner">山之内</span></span><span class="item-note">斜め切りにして密閉袋へ。</span></span></label><label class="check-row" for="homefood-4">
+        <input type="checkbox" id="homefood-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">キノコ</span>
+        <span class="qty">しめじ・舞茸・えのき等、計3パック <span class="owner">山之内</span></span><span class="item-note">石づきを除き、食べやすくほぐす。</span></span></label><label class="check-row" for="homefood-5">
+        <input type="checkbox" id="homefood-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">鍋つゆ（仮：キムチ）</span>
+        <span class="qty">3〜4人前×2袋 <span class="owner">山之内</span></span><span class="item-note">味はみんなのリクエストを聞いてから購入。ストレートタイプが楽。</span></span></label><label class="check-row optional" for="homefood-6">
+        <input type="checkbox" id="homefood-6" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">追加キムチ <span class="opt">任意</span></span>
+        <span class="qty">200〜300g <span class="owner">山之内</span></span><span class="item-note">辛さを足したい人用。鍋つゆだけでも可。</span></span></label><label class="check-row" for="homefood-7">
+        <input type="checkbox" id="homefood-7" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">しょうゆ・わさび</span>
+        <span class="qty">小瓶1本・チューブ1本 <span class="owner">山之内</span></span><span class="item-note">刺し盛に付く場合は追加購入不要。手持ちの小分けでもよい。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-localfood"><summary><span>マックスバリュで買う食べ物</span><span class="group-count"></span></summary>
+    <div class="group-desc">現地の買い物先は、正式名称「マックスバリュ修善寺駅前店」。豆腐・うどん・つまみをまとめて購入する案です。</div><div class="rows"><label class="check-row" for="localfood-0">
+        <input type="checkbox" id="localfood-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">豆腐</span>
+        <span class="qty">300g×2丁 </span><span class="item-note">小分けタイプが便利。普通の豆腐はスプーンで分ける。</span></span></label><label class="check-row" for="localfood-1">
+        <input type="checkbox" id="localfood-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ゆでうどん</span>
+        <span class="qty">4玉 </span><span class="item-note">冷蔵タイプなら鍋に直接入れられる。〆用。</span></span></label><label class="check-row" for="localfood-2">
+        <input type="checkbox" id="localfood-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">枝豆</span>
+        <span class="qty">400〜500g </span><span class="item-note">自然解凍で食べられる商品を選ぶ。</span></span></label><label class="check-row" for="localfood-3">
+        <input type="checkbox" id="localfood-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">カット済み漬物</span>
+        <span class="qty">2種類・計300g程度 </span><span class="item-note">盛り付けるだけ。</span></span></label><label class="check-row" for="localfood-4">
+        <input type="checkbox" id="localfood-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">みかん</span>
+        <span class="qty">10〜14個 </span><span class="item-note">包丁なしで出せる食後の果物。</span></span></label><label class="check-row" for="localfood-5">
+        <input type="checkbox" id="localfood-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ポテトチップス</span>
+        <span class="qty">普通サイズ2袋 </span><span class="item-note">開けるのは食べる分だけ。</span></span></label><label class="check-row" for="localfood-6">
+        <input type="checkbox" id="localfood-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">個包装チョコレート</span>
+        <span class="qty">大袋1袋 </span><span class="item-note">夜のつまみ。残りは持ち帰れる。</span></span></label><label class="check-row optional" for="localfood-7">
+        <input type="checkbox" id="localfood-7" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">ピザ <span class="opt">任意</span></span>
+        <span class="qty">Mサイズ1枚・8カット </span><span class="item-note">レンジを用意する場合の追加候補。温めを省く場合はピザも見送る案。店と受取時刻は未定。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
+<div class="callout callout-warm"><h4>現地では、この順で</h4><p>刺身とつまみを並べる → IHで鍋 → 〆のうどん。レンジがあれば先にピザを温めます。<strong>レンジなしなら、温める料理を省く</strong>。肉は少量ずつ入れ、中まで火を通します。</p></div>
+</section><section id="drink-list"><span class="chapter-num">CHAPTER 07</span><h2 class="sec-title">酒・水・茶・氷の買い物メモ</h2><details class="check-group" id="group-alcohol"><summary><span>酒の買い出し</span><span class="group-count"></span></summary>
+    <div class="group-desc">缶は7人全員分で350ml×3本×7人＝21本。どんちゃんもこの人数に含めます。日本酒・ウイスキーはこれとは別の共用分です。</div><div class="rows"><label class="check-row" for="alcohol-0">
+        <input type="checkbox" id="alcohol-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ビール</span>
+        <span class="qty">350ml×14本 </span><span class="item-note">仮の内訳は7人×2本。銘柄は好みに合わせる。</span></span></label><label class="check-row" for="alcohol-1">
+        <input type="checkbox" id="alcohol-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">酎ハイ・サワー</span>
+        <span class="qty">350ml×7本・5〜7％ </span><span class="item-note">仮の内訳は7人×1本。ビールと合わせて21本。</span></span></label><label class="check-row" for="alcohol-2">
+        <input type="checkbox" id="alcohol-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">日本酒の銘柄・量を決める</span>
+        <span class="qty">どんちゃん・河本にお任せ <span class="owner">どんちゃん・河本</span></span><span class="item-note">日本酒の選定は2人にお任せ。銘柄・本数は固定しません。</span></span></label><label class="check-row" for="alcohol-3">
+        <input type="checkbox" id="alcohol-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">日本酒を用意する</span>
+        <span class="qty">どんちゃん・河本が担当 <span class="owner">どんちゃん・河本</span></span><span class="item-note">2人で相談して準備。予算表の4,500円は従来の仮置きで、選んだ酒に合わせて調整。</span></span></label><label class="check-row" for="alcohol-4">
+        <input type="checkbox" id="alcohol-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ウイスキー（AI仮案：デュワーズ12年）</span>
+        <span class="qty">700ml×1本 </span><span class="item-note">角瓶などへの変更も歓迎。希望を聞いてから購入。</span></span></label><label class="check-row optional" for="alcohol-5">
+        <input type="checkbox" id="alcohol-5" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">ノンアルコールビール <span class="opt">任意</span></span>
+        <span class="qty">350ml×4本程度 </span><span class="item-note">途中で切り替えたい人向けの予備。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-soft"><summary><span>水・茶・炭酸水・氷</span><span class="group-count"></span></summary>
+    <div class="group-desc">水は鍋の調整・飲用・翌朝用。茶と炭酸水は別に用意します。下記は一晩＋翌朝の買い置き案です。</div><div class="rows"><label class="check-row" for="soft-0">
+        <input type="checkbox" id="soft-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ミネラルウォーター</span>
+        <span class="qty">2L×6本＝12L </span><span class="item-note">調理・鍋の調整に2L、飲用・翌朝に8L、未開封予備2L。鍋つゆは別。</span></span></label><label class="check-row" for="soft-1">
+        <input type="checkbox" id="soft-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">お茶</span>
+        <span class="qty">2L×2本＝4L </span><span class="item-note">緑茶1本＋麦茶または烏龍茶1本。</span></span></label><label class="check-row" for="soft-2">
+        <input type="checkbox" id="soft-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">無糖炭酸水</span>
+        <span class="qty">500ml×6本＝3L </span><span class="item-note">開けたてを使いやすい小瓶。ハイボール用。</span></span></label><label class="check-row" for="hotel-ice-collect">
+        <input type="checkbox" id="hotel-ice-collect" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">酒用の氷をホテルで用意</span>
+        <span class="qty">ホテルの氷を利用・購入不要 <span class="owner">ホテルで調達</span></span><span class="item-note">持参する蓋付き容器に必要な分を受け取る。氷用トングも用意。</span></span></label><label class="check-row optional" for="soft-4">
+        <input type="checkbox" id="soft-4" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">レモン果汁 <span class="opt">任意</span></span>
+        <span class="qty">小瓶1本 </span><span class="item-note">包丁不要。好みでハイボールや炭酸水へ。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details></section><section id="equipment"><span class="chapter-num">CHAPTER 08</span><h2 class="sec-title">調理道具・食器・持ち帰り用品</h2><p class="lead">IH・鍋は山之内が持参。道具・食器・カトラリー・片付け用品も山之内が100円ショップ等でそろえて持参します。レンジだけは持参できる人を募集し、用意できた場合に対応皿も持っていきます。</p><details class="check-group" id="group-cook"><summary><span>調理器具を持っていく</span><span class="group-count"></span></summary>
+    <div class="group-desc">IH調理器と対応鍋は山之内が持参。小物も山之内が100円ショップ等でそろえます。電子レンジだけ、小型の単機能を持って来られる人を募ります。</div><div class="rows"><label class="check-row" for="cook-0">
+        <input type="checkbox" id="cook-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">卓上IH調理器</span>
+        <span class="qty">1台・山之内が持参 <span class="owner">山之内</span></span><span class="item-note">持参する対応鍋とセットで準備。</span></span></label><label class="check-row" for="cook-1">
+        <input type="checkbox" id="cook-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">IH対応・蓋付き鍋</span>
+        <span class="qty">1個・山之内が持参 <span class="owner">山之内</span></span><span class="item-note">手持ちの対応鍋を使い、7人分の具は数回に分けて煮る。</span></span></label><label class="check-row optional" for="cook-2">
+        <input type="checkbox" id="cook-2" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">小型の単機能電子レンジ <span class="opt">任意</span></span>
+        <span class="qty">持参できる人を募集 <span class="owner">持参者募集</span></span><span class="item-note">山之内・原山の自宅には大きいものしかない。なければレンタルか、温めはあきらめる（笑）。</span></span></label><label class="check-row" for="cook-3">
+        <input type="checkbox" id="cook-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">お玉・穴あきお玉</span>
+        <span class="qty">各1本 <span class="owner">山之内</span></span><span class="item-note">盛り付けと、残り汁・具の分離に使用。</span></span></label><label class="check-row" for="cook-4">
+        <input type="checkbox" id="cook-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">生肉用トング</span>
+        <span class="qty">1本 <span class="owner">山之内</span></span><span class="item-note">生肉専用と分かるよう印を付ける。</span></span></label><label class="check-row" for="cook-5">
+        <input type="checkbox" id="cook-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">取り箸／盛り付けトング</span>
+        <span class="qty">2組 <span class="owner">山之内</span></span><span class="item-note">刺身・つまみ・加熱後の料理用。</span></span></label><label class="check-row" for="cook-6">
+        <input type="checkbox" id="cook-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">鍋敷き・鍋つかみ</span>
+        <span class="qty">各1組 <span class="owner">山之内</span></span><span class="item-note">熱い鍋を置く場所を確保。</span></span></label><label class="check-row optional" for="cook-7">
+        <input type="checkbox" id="cook-7" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">電子レンジ対応皿 <span class="opt">任意</span></span>
+        <span class="qty">2枚・レンジを使う場合 <span class="owner">山之内</span></span><span class="item-note">山之内が準備。レンジなしなら不要。使い捨て皿は対応表示を確認。</span></span></label><label class="check-row" for="cook-8">
+        <input type="checkbox" id="cook-8" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ラップ</span>
+        <span class="qty">1本 <span class="owner">山之内</span></span><span class="item-note">温め・食品の保護用。</span></span></label><label class="check-row" for="cook-9">
+        <input type="checkbox" id="cook-9" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">調理用スプーン</span>
+        <span class="qty">1本 <span class="owner">山之内</span></span><span class="item-note">豆腐を分ける。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-table"><summary><span>山之内がそろえる食器・カトラリー</span><span class="group-count"></span></summary>
+    <div class="group-desc">100円ショップ等で山之内が購入・持参。食べやすさを優先し、鍋の器だけは汁でへたりにくいものを。コップに名前を書けば、使う数を減らせます。</div><div class="rows"><label class="check-row" for="table-0">
+        <input type="checkbox" id="table-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">汁物用の丈夫な深皿・ボウル</span>
+        <span class="qty">14個 <span class="owner">山之内</span></span><span class="item-note">熱い汁・油に対応したもの。1人2個分。</span></span></label><label class="check-row" for="table-1">
+        <input type="checkbox" id="table-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">平皿</span>
+        <span class="qty">14枚 <span class="owner">山之内</span></span><span class="item-note">刺身・ピザ・つまみ用。</span></span></label><label class="check-row" for="table-2">
+        <input type="checkbox" id="table-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">しょうゆ小皿</span>
+        <span class="qty">7枚 <span class="owner">山之内</span></span><span class="item-note">仕切り付き平皿を使う場合は兼用可。</span></span></label><label class="check-row" for="table-3">
+        <input type="checkbox" id="table-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">大きめの飲料用カップ</span>
+        <span class="qty">400〜500ml・14個 <span class="owner">山之内</span></span><span class="item-note">氷入りハイボール、水・茶用。</span></span></label><label class="check-row" for="table-4">
+        <input type="checkbox" id="table-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">日本酒用の小カップ</span>
+        <span class="qty">90〜120ml・10個程度 <span class="owner">山之内</span></span><span class="item-note">少しずつ注いで飲み比べ。</span></span></label><label class="check-row" for="table-5">
+        <input type="checkbox" id="table-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">割り箸</span>
+        <span class="qty">20膳 <span class="owner">山之内</span></span><span class="item-note">予備を含む。</span></span></label><label class="check-row" for="table-6">
+        <input type="checkbox" id="table-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">使い捨てスプーン</span>
+        <span class="qty">10本 <span class="owner">山之内</span></span><span class="item-note">鍋・豆腐用。</span></span></label><label class="check-row optional" for="table-7">
+        <input type="checkbox" id="table-7" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">使い捨てフォーク <span class="opt">任意</span></span>
+        <span class="qty">7本 <span class="owner">山之内</span></span><span class="item-note">必要な人向け。ナイフは不要。</span></span></label><label class="check-row" for="table-8">
+        <input type="checkbox" id="table-8" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">紙ナプキン／ティッシュ</span>
+        <span class="qty">1パック／1箱 <span class="owner">山之内</span></span><span class="item-note">食卓用。</span></span></label><label class="check-row" for="table-9">
+        <input type="checkbox" id="table-9" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">手口拭き</span>
+        <span class="qty">1パック <span class="owner">山之内</span></span><span class="item-note">清掃用シートと分ける。</span></span></label><label class="check-row" for="table-10">
+        <input type="checkbox" id="table-10" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">油性ペン</span>
+        <span class="qty">1本 <span class="owner">山之内</span></span><span class="item-note">コップの名前・袋の中身を書く。</span></span></label><label class="check-row" for="table-11">
+        <input type="checkbox" id="table-11" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">防水のテーブルシート</span>
+        <span class="qty">1枚 <span class="owner">山之内</span></span><span class="item-note">汚れ防止用。熱い鍋・IH周囲は耐熱の敷物を使う。</span></span></label><label class="check-row" for="table-12">
+        <input type="checkbox" id="table-12" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">氷用トング・蓋付きアイス容器</span>
+        <span class="qty">各1個 <span class="owner">山之内</span></span><span class="item-note">一度に出す氷だけ移す。</span></span></label><label class="check-row" for="table-13">
+        <input type="checkbox" id="table-13" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">計量カップ・マドラー</span>
+        <span class="qty">30mlが量れるもの1個・1本 <span class="owner">山之内</span></span><span class="item-note">ハイボールを同じ濃さで作りやすくする。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-carry"><summary><span>保冷・片付け・持ち帰り用品</span><span class="group-count"></span></summary>
+    <div class="group-desc">山之内が手持ち品と購入品を用意。移動中の食材は保冷し、到着後はホテルの冷蔵庫を利用。残り汁は密閉容器、汚れ物は蓋付き収納箱にまとめます。</div><div class="rows"><label class="check-row" for="carry-0">
+        <input type="checkbox" id="carry-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">肉・野菜用の保冷バッグ</span>
+        <span class="qty">手持ち品 <span class="owner">山之内</span></span><span class="item-note">生肉は二重袋にし、他の食品へ汁が付かないようにする。</span></span></label><label class="check-row" for="carry-1">
+        <input type="checkbox" id="carry-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">刺身用クーラー／発泡スチロール箱</span>
+        <span class="qty">1個 <span class="owner">山之内</span></span><span class="item-note">魚梅の皿が水平に入る内寸。</span></span></label><label class="check-row optional" for="carry-2">
+        <input type="checkbox" id="carry-2" data-check data-optional="true">
+        <span class="check-text"><span class="item-title">飲料用クーラー／発泡スチロール箱 <span class="opt">任意</span></span>
+        <span class="qty">必要なら1個 <span class="owner">山之内</span></span><span class="item-note">ホテルに冷蔵庫あり。移動中の保冷や、冷蔵庫に入り切らない飲料用の補助。</span></span></label><label class="check-row" for="carry-3">
+        <input type="checkbox" id="carry-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">強力保冷材</span>
+        <span class="qty">手持ちの複数個 <span class="owner">山之内</span></span><span class="item-note">前もって十分凍らせる。飲み物も事前に冷やす。</span></span></label><label class="check-row" for="carry-4">
+        <input type="checkbox" id="carry-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">食材用ジッパー袋</span>
+        <span class="qty">大小各10枚程度 <span class="owner">山之内</span></span><span class="item-note">下ごしらえ・食品の小分け用。</span></span></label><label class="check-row" for="carry-5">
+        <input type="checkbox" id="carry-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">残り汁用の密閉容器</span>
+        <span class="qty">合計4L程度・例2L×2個 <span class="owner">山之内</span></span><span class="item-note">広口、パッキン付き、液体運搬対応。空の状態で持参。</span></span></label><label class="check-row" for="carry-6">
+        <input type="checkbox" id="carry-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">蓋付きプラスチック収納箱</span>
+        <span class="qty">40〜60L程度・1個 <span class="owner">山之内</span></span><span class="item-note">汚れた鍋と汁容器が収まるか確認。容器は立てて固定。</span></span></label><label class="check-row" for="carry-7">
+        <input type="checkbox" id="carry-7" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">厚手45Lゴミ袋</span>
+        <span class="qty">8枚程度 <span class="owner">山之内</span></span><span class="item-note">可燃物・缶・びん・ペットボトルを分け、予備も。</span></span></label><label class="check-row" for="carry-8">
+        <input type="checkbox" id="carry-8" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">小さめゴミ袋</span>
+        <span class="qty">5枚程度 <span class="owner">山之内</span></span><span class="item-note">卓上・汚れた道具用。</span></span></label><label class="check-row" for="carry-9">
+        <input type="checkbox" id="carry-9" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">防臭タイプの生ゴミ袋</span>
+        <span class="qty">5枚程度 <span class="owner">山之内</span></span><span class="item-note">食べ残し・刺身のつま等。</span></span></label><label class="check-row" for="carry-10">
+        <input type="checkbox" id="carry-10" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">キッチンペーパー</span>
+        <span class="qty">2ロール <span class="owner">山之内</span></span><span class="item-note">鍋・皿の拭き取り用。</span></span></label><label class="check-row" for="carry-11">
+        <input type="checkbox" id="carry-11" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ゴムベラ／スクレーパー</span>
+        <span class="qty">1本 <span class="owner">山之内</span></span><span class="item-note">鍋の具・油をこそげ取る。</span></span></label><label class="check-row" for="carry-12">
+        <input type="checkbox" id="carry-12" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">使い捨て手袋</span>
+        <span class="qty">数組 <span class="owner">山之内</span></span><span class="item-note">片付け用。</span></span></label><label class="check-row" for="carry-13">
+        <input type="checkbox" id="carry-13" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">台拭き・清掃シート</span>
+        <span class="qty">各1つ <span class="owner">山之内</span></span><span class="item-note">テーブル・レンジの汚れを取る。</span></span></label><label class="check-row" for="carry-14">
+        <input type="checkbox" id="carry-14" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">古タオル</span>
+        <span class="qty">2枚 <span class="owner">山之内</span></span><span class="item-note">運搬中の容器固定・水滴対策。</span></span></label><label class="check-row" for="carry-15">
+        <input type="checkbox" id="carry-15" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">ガムテープ</span>
+        <span class="qty">1巻 <span class="owner">山之内</span></span><span class="item-note">箱の蓋や袋の固定・目印用。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details></section><section id="preparation"><span class="chapter-num">CHAPTER 09</span><h2 class="sec-title">下ごしらえと2台への積み分け</h2>
+<div class="flow"><p><b>山之内の車・原山が同乗</b><br>山之内が準備した肉・野菜・鍋つゆ・IH・鍋・道具・食器・片付け用品・保冷材を積み、ホテルへ直行。</p><p><b>ほかの車</b><br>小型レンジを持参できる人がいれば協力をお願いしたい。酒・飲料や帰りの荷物の分担はこれから。</p><p><b>現地の買い物</b><br>魚梅の刺身受け取りと、スーパーで豆腐・うどん・つまみ・水類を購入する担当・時刻を調整。氷はホテルで用意。</p></div>
+<p class="small">水12L・茶4L・炭酸水3L・缶21本7.35Lで、容器を除いても約26kg。日本酒・ウイスキーも加わるので、飲料は小分けで運びます。</p>
+<details class="check-group" id="group-before"><summary><span>出発までに準備する</span><span class="group-count"></span></summary>
+    <div class="group-desc">山之内はIH・鍋・OKの食材・道具類を準備して持参。原山は山之内車に同乗し、ホテル直行。車はほかに少なくとも1台ある前提です。</div><div class="rows"><label class="check-row" for="before-0">
+        <input type="checkbox" id="before-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">未定の担当を決める</span>
+        <span class="qty">酒・現地買い物・刺身受取・レンジ </span><span class="item-note">山之内担当の食材・IH・鍋・道具類は決定済み。残りと帰りの積み分けを調整。</span></span></label><label class="check-row" for="before-1">
+        <input type="checkbox" id="before-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">鍋の味・酒の希望を聞き、購入する</span>
+        <span class="qty">希望を集めてから酒販店・OK等へ </span><span class="item-note">日本酒はどんちゃん・河本にお任せ。ほかの酒と鍋の希望を集める。ウイスキーの掲載銘柄はAI案。</span></span></label><label class="check-row" for="before-2">
+        <input type="checkbox" id="before-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">肉を切って小分け冷凍する</span>
+        <span class="qty">数日前まで <span class="owner">山之内</span></span><span class="item-note">牛500g・豚700g。平たくして袋に品名を記入。</span></span></label><label class="check-row" for="before-3">
+        <input type="checkbox" id="before-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">野菜を切り、水気を切って冷蔵する</span>
+        <span class="qty">前日〜当日朝 <span class="owner">山之内</span></span><span class="item-note">白菜の芯と葉を分け、キノコをほぐす。</span></span></label><label class="check-row" for="before-4">
+        <input type="checkbox" id="before-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">持参する鍋・IHを確認する</span>
+        <span class="qty">出発前 <span class="owner">山之内</span></span><span class="item-note">山之内がセットで準備。レンジの持参者募集は別途。</span></span></label><label class="check-row" for="before-5">
+        <input type="checkbox" id="before-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">保冷材を凍らせる</span>
+        <span class="qty">前日まで <span class="owner">山之内</span></span><span class="item-note">移動用の強力保冷材を準備。到着後はホテルの冷蔵庫を利用。</span></span></label><label class="check-row" for="before-6">
+        <input type="checkbox" id="before-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">不要な外箱を自宅で外す</span>
+        <span class="qty">出発前 <span class="owner">山之内</span></span><span class="item-note">調理方法の表示は残す。清掃道具を収納箱にまとめる。</span></span></label><label class="check-row" for="before-7">
+        <input type="checkbox" id="before-7" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">出発時に食材・道具を積む</span>
+        <span class="qty">山之内車＋もう1台 </span><span class="item-note">帰りのゴミ・汚れ物のスペースも空ける。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
+<div class="link-buttons"><a href="https://www.mv-tokai.co.jp/store/14155/" target="_blank" rel="noopener noreferrer">マックスバリュ修善寺駅前店・公式店舗情報 ↗</a></div>
+<p class="small">静岡県伊豆市柏久保字新町1347。今回の銘柄・商品の在庫は未確認。</p>
+</section><section id="cleanup"><span class="chapter-num">CHAPTER 10</span><h2 class="sec-title">片付け・翌朝・持ち帰り</h2>
+<div class="flow"><p><b>具・つま・食べ残し</b><br>防臭袋で密封 → 大きなゴミ袋へ。</p><p><b>鍋の残り汁・飲み残し</b><br>冷ます → 液体用密閉容器 → 立てて収納箱に固定。</p><p><b>汚れた鍋・道具</b><br>こそげて拭く → 袋に包む → 収納箱へ。洗うのは帰宅後。</p></div>
+<details class="check-group" id="group-after"><summary><span>食後〜翌朝の片付け</span><span class="group-count"></span></summary>
+    <div class="group-desc">鍋の残り汁・食べ残しはトイレに流さず持ち帰る段取り。洗い物は拭き取って袋へ入れ、自宅で仕上げます。</div><div class="rows"><label class="check-row" for="after-0">
+        <input type="checkbox" id="after-0" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">未開封品と食べ残しを分ける</span>
+        <span class="qty">食後 </span><span class="item-note">未開封の酒・菓子は持ち帰り分へ。</span></span></label><label class="check-row" for="after-1">
+        <input type="checkbox" id="after-1" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">鍋の具を穴あきお玉で取り出す</span>
+        <span class="qty">食後 </span><span class="item-note">生ゴミ袋に入れて密封。</span></span></label><label class="check-row" for="after-2">
+        <input type="checkbox" id="after-2" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">残り汁を冷まし、専用容器へ移す</span>
+        <span class="qty">食後 </span><span class="item-note">蓋を確実に閉めて「廃棄用」と記入。ゴミ袋・発泡箱に直接注がない。</span></span></label><label class="check-row" for="after-3">
+        <input type="checkbox" id="after-3" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">鍋・道具をこそげて拭き取る</span>
+        <span class="qty">食後 </span><span class="item-note">袋に入れ、収納箱へ。自宅で洗う。</span></span></label><label class="check-row" for="after-4">
+        <input type="checkbox" id="after-4" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">可燃物・缶・びん・ペットボトルを分ける</span>
+        <span class="qty">食後 </span><span class="item-note">飲み残しは液体用容器へ。ピザ箱は平たくする。</span></span></label><label class="check-row" for="after-5">
+        <input type="checkbox" id="after-5" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">テーブル・使った機器の汚れを拭く</span>
+        <span class="qty">食後 </span><span class="item-note">汁・油・食品のかすを取る。レンジを使った場合は庫内も。</span></span></label><label class="check-row" for="after-6">
+        <input type="checkbox" id="after-6" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">帰りの2台へ積み分ける</span>
+        <span class="qty">翌朝 </span><span class="item-note">汁容器は立てて固定。生ゴミと食べ物は別にする。</span></span></label><label class="check-row" for="after-7">
+        <input type="checkbox" id="after-7" data-check data-optional="false">
+        <span class="check-text"><span class="item-title">持ち帰り後に処理・返却する</span>
+        <span class="qty">帰宅後 </span><span class="item-note">鍋・容器を洗い、ごみは自治体の分別に従う。借用・レンタルした場合はレンジも返却。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
+<p class="small">発泡スチロール箱は保冷用。液漏れ対策は専用容器で行います。洗う前に汚れを拭き取る方法は、<a href="https://www.pref.saitama.lg.jp/a0505/seikatuhaisuitaisaku.html" target="_blank" rel="noopener noreferrer">埼玉県の生活排水対策</a>も参考に。</p>
+</section><section id="budget"><span class="chapter-num">CHAPTER 11</span><h2 class="sec-title">予算と担当メモ</h2>
+<p class="lead">買い物を決めるための<strong>予算枠</strong>です。店頭価格や見積もりではありません。以下は自炊案の予算で、ホテル飯の場合はホテルの食事代に乾きものと酒の購入費を加える形です。ピザ1枚を含め、食べ物・飲み物・消耗品で約4.1万円、1人約5,900円を想定します。</p>
+<div class="plan-card"><table class="budget"><caption class="small">部屋飲み・鍋を採用した場合の7人分の仮予算</caption><tbody>
+<tr><td>魚梅の刺し盛</td><td>14,000円</td></tr>
+<tr><td>鍋の肉・野菜・つゆ・うどん等</td><td>6,000円</td></tr>
+<tr><td>枝豆・漬物・果物・菓子</td><td>3,500円</td></tr>
+<tr><td>ビール・酎ハイ 計21本</td><td>4,500円</td></tr>
+<tr><td>日本酒（どんちゃん・河本にお任せ）</td><td>仮置き4,500円</td></tr>
+<tr><td>ウイスキー 700ml×1本</td><td>3,000円</td></tr>
+<tr><td>水・茶・炭酸水（氷はホテル）</td><td>1,700円</td></tr>
+<tr><td>使い捨て食器・袋等</td><td>2,000円</td></tr>
+<tr><td>ピザ M1枚・任意</td><td>2,000円</td></tr>
+<tr class="total"><td>合計／7人</td><td>41,200円</td></tr></tbody></table>
+<p class="small">1人あたり約5,890円。日本酒の4,500円は従来の仮予算で、2人の選定に合わせて合計も調整します。IH・鍋は山之内の手持ち品。レンジを借りる場合のレンタル・送料、保冷箱等の追加購入、ノンアル等の任意品は別。宿泊・交通・朝食も含みません。</p></div>
+<h3 class="sub-title">これから詰めること</h3><p class="lead">ホテル飯と部屋飲みの希望、鍋の味・具、小型レンジを持参できる人がいるか、ピザを付けるか、缶21本の内訳、ウイスキー等のリクエスト。日本酒はどんちゃん・河本が担当。ほかの酒の購入・現地の買い物・魚梅受取・帰りの荷物の担当も調整します。鍋を採用する場合のIH・鍋・OK食材・道具類の担当は山之内です。</p>
+<label for="memo" class="sub-title" style="display:block">担当・銘柄・買い足しメモ</label>
+<textarea id="memo" placeholder="例：鍋は寄せ鍋希望、ウイスキーは角瓶、レンジ＝○○、魚梅受取＝○時"></textarea>
+<p class="small">チェックとメモは、この端末・ブラウザ内に保存。希望を書いても自動送信されないので、リクエストは山之内へ連絡してください。ほかの人の端末には同期しません。任意品は準備率に含めません。ファイルを移動したりブラウザの保存情報を消すと、記録が戻らない場合があります。</p>
+<div class="utilities"><button id="print" type="button">印刷・PDF保存</button><button id="reset" type="button">チェックとメモをリセット</button></div>
+</section></details><section id="sources"><span class="chapter-num">CHAPTER 12</span><h2 class="sec-title">調査の出典</h2>
+<details><summary>口コミ・商品情報の出典</summary><div class="body"><ul class="source-list">
+<li><a href="https://www.laforet.co.jp/lf-zmh/restaurant/" target="_blank" rel="noopener noreferrer">マリオット・Grill &amp; Dining G公式案内</a>：2026年10月20日確認。秋のグリルディナー8,500円〜、シェアディナー15,000円と提供期間・条件。</li>
+<li><a href="https://www.laforet.co.jp/lf-shuzenji/restaurant/" target="_blank" rel="noopener noreferrer">ラフォーレ修善寺・公式レストラン案内</a>：2026年10月20日確認。11月7日を含む秋コースの期間・税込サービス料込価格を確認。</li>
+<li><a href="https://www.laforet.co.jp/shuzenji/faq/dining/" target="_blank" rel="noopener noreferrer">公式・食事FAQ</a>：朝食はブッフェ、夕食は時期によって案内があるとの説明。11月7日の夕食ビュッフェ開催は公式案内で確認できず。</li>
+<li>前回資料「マリオット修善寺 夜飯ガイド」「ラフォーレ修善寺 口コミまとめ」「口コミ層別20件」、Google口コミの保存データ（2026年6月調査）。今回の抜粋は保存本文を参照。原投稿は今回再確認しておらず、現在の秋コースの実食評価ではありません。</li>
+<li>日本酒の選定・準備はどんちゃん・河本にお任せ：2026年10月22日の山之内からの指定。</li>
+<li>自炊案での刺し盛の採用・持参担当・原山の同乗・ホテルの氷、部屋の冷蔵庫・電気ポット・電子レンジなし・自炊禁止：2026年10月20日の山之内からの共有内容。</li>
+<li><a href="https://www.google.com/maps/place/data=!4m7!3m6!1s0x6019ed3b5f8b5151:0x7e0fb63ffa0625fc!8m2!3d34.9575602!4d138.908982!9m1!1b1" target="_blank" rel="noopener noreferrer">ラフォーレ修善寺・Googleマップ</a></li>
+<li><a href="https://tabelog.com/shizuoka/A2205/A220504/22031614/dtlrvwlst/B266449335/?type=0" target="_blank" rel="noopener noreferrer">魚梅・食べログの口コミ（共有リンク）</a></li>
+<li><a href="https://note.com/kotouda/n/n62867c872750" target="_blank" rel="noopener noreferrer">魚梅・地元からの紹介記事</a></li>
+<li><a href="https://www.ekiten.jp/shop_4817975/" target="_blank" rel="noopener noreferrer">魚梅 修善寺駅前店・口コミ</a></li>
+<li><a href="https://www.dewars-jp.com/lineup/dewars_12years.html" target="_blank" rel="noopener noreferrer">デュワーズ12年・公式</a></li>
+<li><a href="https://www.suntory.co.jp/whisky/kakubin/product/kaku.html" target="_blank" rel="noopener noreferrer">角瓶・公式</a>：代替案の味の説明。選定理由はAIの判断。</li>
+<li><a href="https://www.mv-tokai.co.jp/store/14155/" target="_blank" rel="noopener noreferrer">マックスバリュ修善寺駅前店・公式</a></li>
+</ul><p>商品・店舗情報確認：2026年10月20日。食料・飲料の数量、組み合わせ、予算枠は今回の提案です。</p></div></details>
+</section></main>
+<footer class="fry"><h3>今年の夜飯、どうしようか。</h3><p>Sunny合宿 夕食相談／2026年10月23日 更新<br>企画：山之内・作成補助：Codex<br>前回のClaude Designによる配色・目玉焼き・カード・目次を継承。</p></footer>
+<button class="menu-btn" id="menu-button" aria-label="目次を開く" aria-controls="menu" aria-expanded="false" type="button">≡</button>
+<div class="menu-overlay" id="menu"><nav class="menu-panel" role="dialog" aria-modal="true" aria-label="目次"><h4>目次<button class="close" id="menu-close" aria-label="目次を閉じる" type="button">×</button></h4><ol>
+<li><a href="#choice">今年の夕食、どちらにしよう？</a></li><li><a href="#dining">ホテル飯：レストランの候補</a></li><li><a href="#proposal">部屋パーティー：刺し盛と鍋</a></li><li><a href="#drinks">酒の希望も聞かせてください</a></li><li><a href="#discussion">まず決めたいこと</a></li>
+<li><a href="#reference">参考：決まってからの準備メモ</a></li><li><a href="#sources">調査の出典</a></li>
+</ol></nav></div><script>
+(() => {
+ const key='sunny-dinner-20261107-v1', boxes=[...document.querySelectorAll('[data-check]')], memo=document.getElementById('memo');
+ let state={}, only=false, canSave=true;
+ try {state=JSON.parse(localStorage.getItem(key)||'{}')||{};} catch(e){canSave=false;}
+ boxes.forEach(x=>{x.checked=state.checks?.[x.id]===true;});
+ memo.value=typeof state.memo==='string'?state.memo:'';
+ const status=document.getElementById('save-status');
+ function refresh(){
+  const required=boxes.filter(x=>x.dataset.optional==='false'), done=required.filter(x=>x.checked).length;
+  document.getElementById('count').textContent=`準備 ${done} / ${required.length}`;
+  const progress=document.getElementById('progress');progress.max=required.length;progress.value=done;
+  boxes.forEach(x=>{x.closest('label').classList.toggle('done',x.checked);x.closest('label').hidden=only&&x.checked;});
+  document.querySelectorAll('.check-group').forEach(g=>{
+   const all=[...g.querySelectorAll('[data-check]')], req=all.filter(x=>x.dataset.optional==='false');
+   g.querySelector('.group-count').textContent=`${req.filter(x=>x.checked).length} / ${req.length}`;
+   g.querySelector('.empty').hidden=!(only&&all.every(x=>x.checked));
+  });
+  status.textContent=canSave?'この端末に自動保存・任意品は準備率の対象外':'この環境では保存できません。チェックは表示中のみ有効です。';
+ }
+ function save(){try{localStorage.setItem(key,JSON.stringify({checks:Object.fromEntries(boxes.map(x=>[x.id,x.checked])),memo:memo.value}));canSave=true;}catch(e){canSave=false;}refresh();}
+ boxes.forEach(x=>x.addEventListener('change',save));memo.addEventListener('input',save);
+ document.getElementById('filter').addEventListener('click',e=>{only=!only;e.currentTarget.setAttribute('aria-pressed',String(only));e.currentTarget.textContent=only?'全部表示':'未完了だけ';refresh();});
+ document.getElementById('reset').addEventListener('click',()=>{if(confirm('この端末のチェックと担当メモをすべて消しますか？')){boxes.forEach(x=>x.checked=false);memo.value='';save();}});
+ const overlay=document.getElementById('menu'), menuButton=document.getElementById('menu-button');
+ function closeMenu(){overlay.classList.remove('on');menuButton.setAttribute('aria-expanded','false');menuButton.focus();}
+ menuButton.addEventListener('click',()=>{overlay.classList.add('on');menuButton.setAttribute('aria-expanded','true');document.getElementById('menu-close').focus();});
+ document.getElementById('menu-close').addEventListener('click',closeMenu);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)closeMenu();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(e.key==='Tab'&&overlay.classList.contains('on')){const f=[...overlay.querySelectorAll('button,a')];if(e.shiftKey&&document.activeElement===f[0]){e.preventDefault();f.at(-1).focus();}else if(!e.shiftKey&&document.activeElement===f.at(-1)){e.preventDefault();f[0].focus();}}});
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.getElementById(a.getAttribute('href').slice(1));if(target){e.preventDefault();closeMenu();for(let parent=target.parentElement;parent;parent=parent.parentElement){if(parent.tagName==='DETAILS')parent.open=true;}target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}}));
+ let printState=[];
+ window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true);});
+ window.addEventListener('afterprint',()=>printState.forEach(([d,open])=>d.open=open));
+ document.getElementById('print').addEventListener('click',()=>window.print());
+ refresh();
+})();
+</script></body></html>
