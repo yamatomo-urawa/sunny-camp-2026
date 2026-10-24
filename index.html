@@ -223,7 +223,7 @@ textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-r
 <p class="lead">今回まず相談したいのは、<strong>夕食をホテルで食べるか、部屋で刺し盛と鍋を囲むか</strong>。どちらも候補です。みんなの希望を聞いてから決めましょう。</p>
 <div class="decision-grid">
 <div class="plan-card"><span class="plan-tag">ホテル飯</span><h3 class="plan-name">料理と片付けはお店にお任せ</h3><p class="decision-price">食事 7,500円〜／人</p><p class="plan-desc">FUJIのコース、マリオットのグリル料理。食後は部屋で、乾きものと酒を囲んで飲む形です。</p><div class="plan-spec">夕食時の飲み物と、部屋用の乾きもの・酒代は別。<strong>刺し盛も鍋も用意しません。</strong></div><div class="link-buttons"><a href="#dining">ホテルのメニュー・料金・口コミを見る ↓</a></div></div>
-<div class="plan-card"><span class="plan-tag">部屋パーティー</span><h3 class="plan-name">魚梅の刺し盛＋牛・豚の鍋</h3><p class="decision-price">約5,900円／人の仮予算</p><p class="plan-desc">刺し盛を頼み、好きな味の鍋と好きな酒でゆっくり。IH・鍋・肉や野菜・道具類は山之内が準備する案です。</p><div class="plan-spec">食べ物・酒・水類・消耗品込みの試算。片付けとゴミの持ち帰りは分担。レンジのレンタル代等は別です。</div><div class="link-buttons"><a href="#proposal">部屋の条件・料理・分担を見る ↓</a></div></div>
+<div class="plan-card"><span class="plan-tag">部屋パーティー</span><h3 class="plan-name">魚梅の刺し盛＋牛・豚の鍋</h3><p class="decision-price">約5,900円／人の仮予算</p><p class="plan-desc">刺し盛を頼み、好きな味の鍋と好きな酒でゆっくり。IH・鍋・肉や野菜・道具類は山之内が準備する案です。</p><div class="plan-spec">食べ物・酒・水類・消耗品込みの試算。片付けと汚れた鍋・IHの持ち帰りは分担。食品ゴミはホテルが処理するとのこと。レンジのレンタル代等は別です。</div><div class="link-buttons"><a href="#proposal">部屋の条件・料理・分担を見る ↓</a></div></div>
 </div>
 <table class="choice-table"><caption class="small">選ぶときに違うところ</caption><thead><tr><th>比較</th><th>ホテル飯</th><th>部屋パーティー</th></tr></thead><tbody><tr><th>食事</th><td>お店のコース・グリル料理</td><td>魚梅の刺し盛と鍋</td></tr><tr><th>酒</th><td>夕食時は店で注文。部屋用は持参</td><td>希望を聞いて買い出し</td></tr><tr><th>準備</th><td>店・コースを決めて予約</td><td>食材や道具を持参、片付けを分担</td></tr><tr><th>条件</th><td>空席と予約条件を確認</td><td>キッチンなし・自炊禁止の部屋</td></tr></tbody></table>
 <p class="small">ホテル飯は公式の食事料金、部屋パーティーは酒等を含む仮予算で、含むものが違います。詳しい条件はそれぞれの案に記載しています。</p>
@@ -447,7 +447,7 @@ textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-r
         <input type="checkbox" id="table-13" data-check data-optional="false">
         <span class="check-text"><span class="item-title">計量カップ・マドラー</span>
         <span class="qty">30mlが量れるもの1個・1本 <span class="owner">山之内</span></span><span class="item-note">ハイボールを同じ濃さで作りやすくする。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details><details class="check-group" id="group-carry"><summary><span>保冷・片付け・持ち帰り用品</span><span class="group-count"></span></summary>
-    <div class="group-desc">山之内が手持ち品と購入品を用意。移動中の食材は保冷し、到着後はホテルの冷蔵庫を利用。残り汁は密閉容器、汚れ物は蓋付き収納箱にまとめます。</div><div class="rows"><label class="check-row" for="carry-0">
+    <div class="group-desc">山之内が手持ち品と購入品を用意。移動中の食材は保冷し、到着後はホテルの冷蔵庫を利用。食品ゴミは袋にまとめてホテルへ。鍋は冷まして拭き取り、二重袋と箱で運び、IHは乾かして別箱へ。</div><div class="rows"><label class="check-row" for="carry-0">
         <input type="checkbox" id="carry-0" data-check data-optional="false">
         <span class="check-text"><span class="item-title">肉・野菜用の保冷バッグ</span>
         <span class="qty">手持ち品 <span class="owner">山之内</span></span><span class="item-note">生肉は二重袋にし、他の食品へ汁が付かないようにする。</span></span></label><label class="check-row" for="carry-1">
@@ -462,16 +462,13 @@ textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-r
         <span class="qty">手持ちの複数個 <span class="owner">山之内</span></span><span class="item-note">前もって十分凍らせる。飲み物も事前に冷やす。</span></span></label><label class="check-row" for="carry-4">
         <input type="checkbox" id="carry-4" data-check data-optional="false">
         <span class="check-text"><span class="item-title">食材用ジッパー袋</span>
-        <span class="qty">大小各10枚程度 <span class="owner">山之内</span></span><span class="item-note">下ごしらえ・食品の小分け用。</span></span></label><label class="check-row" for="carry-5">
-        <input type="checkbox" id="carry-5" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">残り汁用の密閉容器</span>
-        <span class="qty">合計4L程度・例2L×2個 <span class="owner">山之内</span></span><span class="item-note">広口、パッキン付き、液体運搬対応。空の状態で持参。</span></span></label><label class="check-row" for="carry-6">
+        <span class="qty">大小各10枚程度 <span class="owner">山之内</span></span><span class="item-note">下ごしらえ・食品の小分け用。</span></span></label><label class="check-row" for="carry-pot-bags"><input type="checkbox" id="carry-pot-bags" data-check data-optional="false"><span class="check-text"><span class="item-title">鍋用厚手大袋・IH用の別袋</span><span class="qty">鍋用2枚＋予備2枚／IH用1枚＋予備1枚</span><span class="item-note">鍋は取っ手まで包める大きさ。45Lで足りなければ70L。冷まして拭き取ってから包む。IHは冷やして乾かし、タオルと専用袋で別箱へ。</span></span></label><label class="check-row" for="carry-6">
         <input type="checkbox" id="carry-6" data-check data-optional="false">
         <span class="check-text"><span class="item-title">蓋付きプラスチック収納箱</span>
-        <span class="qty">40〜60L程度・1個 <span class="owner">山之内</span></span><span class="item-note">汚れた鍋と汁容器が収まるか確認。容器は立てて固定。</span></span></label><label class="check-row" for="carry-7">
+        <span class="qty">40〜60L程度・1個 <span class="owner">山之内</span></span><span class="item-note">取っ手込みの鍋が水平に収まる内寸を確認。底に吸水シート、周囲に古タオル。IHは別箱。</span></span></label><label class="check-row" for="carry-7">
         <input type="checkbox" id="carry-7" data-check data-optional="false">
         <span class="check-text"><span class="item-title">厚手45Lゴミ袋</span>
-        <span class="qty">8枚程度 <span class="owner">山之内</span></span><span class="item-note">可燃物・缶・びん・ペットボトルを分け、予備も。</span></span></label><label class="check-row" for="carry-8">
+        <span class="qty">8枚程度 <span class="owner">山之内</span></span><span class="item-note">ホテル指定の分別用。鍋を包む厚手大袋は別途2枚＋予備2枚を用意。</span></span></label><label class="check-row" for="carry-8">
         <input type="checkbox" id="carry-8" data-check data-optional="false">
         <span class="check-text"><span class="item-title">小さめゴミ袋</span>
         <span class="qty">5枚程度 <span class="owner">山之内</span></span><span class="item-note">卓上・汚れた道具用。</span></span></label><label class="check-row" for="carry-9">
@@ -491,8 +488,8 @@ textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-r
         <span class="check-text"><span class="item-title">台拭き・清掃シート</span>
         <span class="qty">各1つ <span class="owner">山之内</span></span><span class="item-note">テーブル・レンジの汚れを取る。</span></span></label><label class="check-row" for="carry-14">
         <input type="checkbox" id="carry-14" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">古タオル</span>
-        <span class="qty">2枚 <span class="owner">山之内</span></span><span class="item-note">運搬中の容器固定・水滴対策。</span></span></label><label class="check-row" for="carry-15">
+        <span class="check-text"><span class="item-title">古タオル・吸水シート</span>
+        <span class="qty">2枚 <span class="owner">山之内</span></span><span class="item-note">鍋の角・蓋の保護と箱の隙間埋めに古タオル3〜4枚。箱底に吸水シート数枚。</span></span></label><label class="check-row" for="carry-15">
         <input type="checkbox" id="carry-15" data-check data-optional="false">
         <span class="check-text"><span class="item-title">ガムテープ</span>
         <span class="qty">1巻 <span class="owner">山之内</span></span><span class="item-note">箱の蓋や袋の固定・目印用。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details></section><section id="preparation"><span class="chapter-num">CHAPTER 09</span><h2 class="sec-title">下ごしらえと2台への積み分け</h2>
@@ -523,39 +520,10 @@ textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-r
         <span class="qty">出発前 <span class="owner">山之内</span></span><span class="item-note">調理方法の表示は残す。清掃道具を収納箱にまとめる。</span></span></label><label class="check-row" for="before-7">
         <input type="checkbox" id="before-7" data-check data-optional="false">
         <span class="check-text"><span class="item-title">出発時に食材・道具を積む</span>
-        <span class="qty">山之内車＋もう1台 </span><span class="item-note">帰りのゴミ・汚れ物のスペースも空ける。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
+        <span class="qty">山之内車＋もう1台 </span><span class="item-note">帰りの鍋の箱とIHの別箱が動かず収まる場所を空ける。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
 <div class="link-buttons"><a href="https://www.mv-tokai.co.jp/store/14155/" target="_blank" rel="noopener noreferrer">マックスバリュ修善寺駅前店・公式店舗情報 ↗</a></div>
 <p class="small">静岡県伊豆市柏久保字新町1347。今回の銘柄・商品の在庫は未確認。</p>
-</section><section id="cleanup"><span class="chapter-num">CHAPTER 10</span><h2 class="sec-title">片付け・翌朝・持ち帰り</h2>
-<div class="flow"><p><b>具・つま・食べ残し</b><br>防臭袋で密封 → 大きなゴミ袋へ。</p><p><b>鍋の残り汁・飲み残し</b><br>冷ます → 液体用密閉容器 → 立てて収納箱に固定。</p><p><b>汚れた鍋・道具</b><br>こそげて拭く → 袋に包む → 収納箱へ。洗うのは帰宅後。</p></div>
-<details class="check-group" id="group-after"><summary><span>食後〜翌朝の片付け</span><span class="group-count"></span></summary>
-    <div class="group-desc">鍋の残り汁・食べ残しはトイレに流さず持ち帰る段取り。洗い物は拭き取って袋へ入れ、自宅で仕上げます。</div><div class="rows"><label class="check-row" for="after-0">
-        <input type="checkbox" id="after-0" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">未開封品と食べ残しを分ける</span>
-        <span class="qty">食後 </span><span class="item-note">未開封の酒・菓子は持ち帰り分へ。</span></span></label><label class="check-row" for="after-1">
-        <input type="checkbox" id="after-1" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">鍋の具を穴あきお玉で取り出す</span>
-        <span class="qty">食後 </span><span class="item-note">生ゴミ袋に入れて密封。</span></span></label><label class="check-row" for="after-2">
-        <input type="checkbox" id="after-2" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">残り汁を冷まし、専用容器へ移す</span>
-        <span class="qty">食後 </span><span class="item-note">蓋を確実に閉めて「廃棄用」と記入。ゴミ袋・発泡箱に直接注がない。</span></span></label><label class="check-row" for="after-3">
-        <input type="checkbox" id="after-3" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">鍋・道具をこそげて拭き取る</span>
-        <span class="qty">食後 </span><span class="item-note">袋に入れ、収納箱へ。自宅で洗う。</span></span></label><label class="check-row" for="after-4">
-        <input type="checkbox" id="after-4" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">可燃物・缶・びん・ペットボトルを分ける</span>
-        <span class="qty">食後 </span><span class="item-note">飲み残しは液体用容器へ。ピザ箱は平たくする。</span></span></label><label class="check-row" for="after-5">
-        <input type="checkbox" id="after-5" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">テーブル・使った機器の汚れを拭く</span>
-        <span class="qty">食後 </span><span class="item-note">汁・油・食品のかすを取る。レンジを使った場合は庫内も。</span></span></label><label class="check-row" for="after-6">
-        <input type="checkbox" id="after-6" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">帰りの2台へ積み分ける</span>
-        <span class="qty">翌朝 </span><span class="item-note">汁容器は立てて固定。生ゴミと食べ物は別にする。</span></span></label><label class="check-row" for="after-7">
-        <input type="checkbox" id="after-7" data-check data-optional="false">
-        <span class="check-text"><span class="item-title">持ち帰り後に処理・返却する</span>
-        <span class="qty">帰宅後 </span><span class="item-note">鍋・容器を洗い、ごみは自治体の分別に従う。借用・レンタルした場合はレンジも返却。</span></span></label></div><p class="empty" hidden>このリストは準備済みです。</p></details>
-<p class="small">発泡スチロール箱は保冷用。液漏れ対策は専用容器で行います。洗う前に汚れを拭き取る方法は、<a href="https://www.pref.saitama.lg.jp/a0505/seikatuhaisuitaisaku.html" target="_blank" rel="noopener noreferrer">埼玉県の生活排水対策</a>も参考に。</p>
-</section><section id="budget"><span class="chapter-num">CHAPTER 11</span><h2 class="sec-title">予算と担当メモ</h2>
+</section><section id="cleanup"><span class="chapter-num">CHAPTER 10</span><h2 class="sec-title">ホテルでゴミ処理・鍋とIHは自宅で洗う</h2><p class="lead">食品ゴミは袋にまとめて部屋に置けばホテルが処理するとのこと。残り汁はホテルから案内された方法で処理し、運搬用の密閉容器は用意しません。洗い物は現地ではできないため、鍋とIHを汚れが移らない状態にして持ち帰ります。</p><div class="flow"><p><b>鍋</b><br>完全に冷ます → 具・汁を除く → ゴムベラとペーパーで内側・縁・底を拭く → 鍋の中に乾いたペーパー → 角にタオル → 厚手袋で二重に包み、それぞれ口を結ぶ。</p><p><b>蓋と箱</b><br>蓋は別袋とタオルで保護。箱底に吸水シートを敷き、鍋を水平に入れ、周囲をタオルで固定。家の丈夫な段ボール箱なら底に厚手袋も敷く。</p><p><b>IH</b><br>冷却ファン停止後にプラグを抜く → 冷ます → 固く絞った布などで天板を拭き、乾かす → タオルと専用袋 → 元箱か別の丈夫な箱。水洗いせず、IHの上に鍋を重ねない。</p><p><b>帰宅後</b><br>すぐ開封して鍋・蓋・道具を洗う。IHは取扱説明書に沿って清掃。</p></div><div class="link-buttons"><a href="shopping.html#transport">追加する用具と持ち帰り手順の詳細 ↗</a></div><p class="small">鍋用の袋・箱は取っ手込みの寸法で選びます。食品ゴミはホテルへ、缶・びん等はホテル指定の分別で。ホテルでの処理方法は山之内からの共有内容。</p></section><section id="budget"><span class="chapter-num">CHAPTER 11</span><h2 class="sec-title">予算と担当メモ</h2>
 <p class="lead">買い物を決めるための<strong>予算枠</strong>です。店頭価格や見積もりではありません。以下は自炊案の予算で、ホテル飯の場合はホテルの食事代に乾きものと酒の購入費を加える形です。ピザ1枚を含め、食べ物・飲み物・消耗品で約4.1万円、1人約5,900円を想定します。</p>
 <div class="plan-card"><table class="budget"><caption class="small">部屋飲み・鍋を採用した場合の7人分の仮予算</caption><tbody>
 <tr><td>魚梅の刺し盛</td><td>14,000円</td></tr>
