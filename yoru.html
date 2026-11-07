@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFC107"><title>Sunny合宿｜夜の部・あれから何年？近況報告会</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--yolk:#FFC528;--yolk-d:#FF9F1C;--yolk-l:#FFE082;--white:#FFFBEE;--white-edge:#FFF1C4;--pan:#1B1B1B;--pan-l:#3A3A3A;--bacon:#E63946;--herb:#52B788;--sky:#48BFE3;--pink:#FF6FB5;--ink:#1A1A1A;--sub:#5C5C5C;--bg:#FFF5D6}
+html,body{background:var(--bg);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN W4","ヒラギノ角ゴ ProN W3","Hiragino Sans","Meiryo",sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{max-width:480px;margin:0 auto;padding:0 0 100px;background:radial-gradient(circle at 20% 5%,#FFEAA5 0%,transparent 40%),radial-gradient(circle at 80% 35%,#FFD9E8 0%,transparent 35%),radial-gradient(circle at 30% 80%,#C7F0DB 0%,transparent 40%),var(--bg);min-height:100vh}
+.hero{position:relative;padding:24px 16px 12px;text-align:center;overflow:hidden}
+.badge-top{display:inline-block;background:var(--pan);color:var(--yolk);font-size:10px;font-weight:700;letter-spacing:.2em;padding:5px 14px;border-radius:999px;margin-bottom:10px}
+.hero h1{font-size:23px;font-weight:900;letter-spacing:-.01em;line-height:1.3;color:var(--ink);margin-bottom:6px}
+.hero h1 .accent{color:var(--yolk-d);display:block;font-size:26px;margin-top:2px}
+.hero .sub{font-size:13px;color:var(--sub);margin-bottom:14px;font-weight:600;line-height:1.5}
+.hero .sub .key{color:var(--yolk-d);font-weight:800}
+.egg-wrap{position:relative;width:100%;aspect-ratio:1/1;max-width:300px;margin:0 auto;filter:drop-shadow(0 14px 20px rgba(255,159,28,.25))}
+.egg-svg{width:100%;height:100%;animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+.egg-stat{position:absolute;background:var(--pan);color:#fff;border-radius:14px;padding:5px 10px;font-weight:800;font-size:12px;box-shadow:0 6px 12px rgba(0,0,0,.18)}
+.egg-stat .n{display:block;font-size:18px;line-height:1;color:var(--yolk);margin-bottom:2px;font-feature-settings:"tnum"}
+.egg-stat .l{font-size:9px;letter-spacing:.1em;font-weight:600;opacity:.9}
+.egg-stat.s1{top:6%;right:-6px;transform:rotate(8deg)}
+.egg-stat.s2{bottom:8%;left:-10px;transform:rotate(-6deg)}
+.egg-stat.s3{top:48%;right:-14px;transform:rotate(4deg)}
+.sizzle{position:absolute;font-size:14px;font-weight:900;color:var(--yolk-d);opacity:.4;letter-spacing:.3em;pointer-events:none}
+.sz1{top:18%;left:-10px;transform:rotate(-15deg)}
+.sz2{top:38%;right:-6px;transform:rotate(20deg)}
+section{padding:24px 16px}
+.chapter-num{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.25em;color:var(--yolk-d);background:#fff;padding:4px 10px;border-radius:999px;margin-bottom:8px;box-shadow:0 2px 4px rgba(0,0,0,.06)}
+h2.sec-title{font-size:21px;font-weight:900;line-height:1.35;margin-bottom:10px;color:var(--ink);scroll-margin-top:60px}
+h2.sec-title .ic{display:inline-block;margin-right:6px;animation:wob 3s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(0)}50%{transform:rotate(-8deg)}}
+h3.sub-title{font-size:15px;font-weight:900;margin:18px 0 8px;color:var(--ink);padding-left:12px;border-left:4px solid var(--yolk);line-height:1.4}
+.lead{font-size:13.5px;line-height:1.9;margin-bottom:14px;color:var(--ink)}
+.lead p{margin-bottom:10px}
+.lead strong{font-weight:900;color:var(--yolk-d)}
+.lead .hl{background:linear-gradient(transparent 55%,var(--yolk-l) 55%,var(--yolk-l) 90%,transparent 90%);padding:0 2px;font-weight:700}
+.lead .red{color:var(--bacon);font-weight:700}
+.review{background:#fff;border-radius:16px;padding:14px;margin-bottom:10px;border:2px solid var(--white-edge);position:relative;box-shadow:0 3px 8px rgba(0,0,0,.04)}
+.review::before{content:"";position:absolute;top:-7px;left:14px;width:22px;height:22px;background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,var(--yolk) 13%,var(--yolk-d) 100%);border-radius:50%;box-shadow:0 2px 3px rgba(0,0,0,.15)}
+.review-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;margin-bottom:6px;padding-left:30px}
+.review-star{color:var(--yolk-d);font-weight:800;font-size:13px;letter-spacing:.05em}
+.review-author{font-weight:700;color:var(--ink);font-size:12px}
+.review-source{font-size:10px;background:var(--white-edge);padding:2px 7px;border-radius:6px;color:var(--sub);font-weight:600}
+.badges{display:flex;flex-wrap:wrap;gap:4px;padding-left:30px;margin-bottom:8px}
+.b{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:999px;line-height:1.5;letter-spacing:.02em}
+.b-count{background:#E3F2FD;color:#1565C0}
+.b-quality{background:#F3E5F5;color:#6A1B9A}
+.b-balanced{background:#E8F5E9;color:#2E7D32}
+.b-repeat{background:#FFF3E0;color:#E65100}
+.b-old{background:#ECEFF1;color:#455A64}
+.b-pet{background:#FFEBEE;color:#C62828}
+.b-foreign{background:#E0F7FA;color:#00695C}
+.review-body{font-size:12.5px;line-height:1.75;color:var(--ink);font-family:"Hiragino Mincho ProN","ヒラギノ明朝 ProN W3",serif}
+.review-body em{font-style:normal;background:linear-gradient(transparent 55%,var(--yolk-l) 55%,var(--yolk-l) 92%,transparent 92%);padding:0 1px;font-weight:600}
+.review-jp{background:linear-gradient(135deg,#FFFEF5 0%,#FFFAE0 100%);border-color:var(--yolk)}
+.review-en{background:linear-gradient(135deg,#F8F5FF 0%,#EAE6FA 100%);border-color:#9C89F0}
+.review-en::before{background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,#B0A0FF 13%,#7E69E0 100%)}
+.review-en .review-body{font-family:"Georgia","Hiragino Mincho ProN",serif}
+.review-neg{background:linear-gradient(135deg,#FFF5F0 0%,#FFE8DA 100%);border-color:#FFAB91}
+.review-pos{background:linear-gradient(135deg,#F0FAF4 0%,#D9F2E1 100%);border-color:#90D8A8}
+.stat-strip{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.stat-strip .s{flex:1;min-width:90px;background:#fff;border-radius:12px;padding:10px 8px;text-align:center;border:2px solid var(--white-edge);box-shadow:0 2px 4px rgba(0,0,0,.04)}
+.stat-strip .s .n{font-size:18px;font-weight:900;color:var(--yolk-d);line-height:1.1;font-feature-settings:"tnum";margin-bottom:3px}
+.stat-strip .s .l{font-size:10px;color:var(--sub);font-weight:600;line-height:1.3}
+.stars-grid{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.star-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700}
+.star-row .lbl{width:34px;color:var(--yolk-d);font-size:13px}
+.star-row .bar{flex:1;height:16px;background:var(--white-edge);border-radius:999px;overflow:hidden;position:relative}
+.star-row .fill{height:100%;border-radius:999px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;color:#fff;font-size:10px;font-weight:800;transition:width 1s ease-out}
+.star-row .fill.f5{background:linear-gradient(90deg,#FFB300,#FF8F00)}
+.star-row .fill.f4{background:linear-gradient(90deg,#FFC107,#FFA000)}
+.star-row .fill.f3{background:linear-gradient(90deg,#A1D99B,#52B788)}
+.star-row .fill.f2{background:linear-gradient(90deg,#FFAB91,#FF7043)}
+.star-row .fill.f1{background:linear-gradient(90deg,#EF5350,#C62828)}
+.star-row .pct{font-size:10px;color:var(--sub);width:34px;text-align:right}
+.callout{background:var(--pan);color:#FFF8E7;border-radius:18px;padding:14px;margin:14px 0;position:relative;overflow:hidden}
+.callout::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,197,40,.15) 0%,transparent 60%);pointer-events:none}
+.callout h4{color:var(--yolk);font-size:14px;font-weight:900;margin-bottom:6px;position:relative}
+.callout p{font-size:12.5px;line-height:1.8;color:#FFF8E7;position:relative;margin-bottom:8px}
+.callout p:last-child{margin-bottom:0}
+.callout p strong{color:var(--yolk);font-weight:800}
+.callout-warm{background:linear-gradient(135deg,#FFF1C4 0%,#FFE082 100%);color:var(--ink);border:2px solid var(--yolk)}
+.callout-warm::before{background:radial-gradient(circle at 80% 20%,rgba(255,159,28,.2) 0%,transparent 60%)}
+.callout-warm h4{color:var(--yolk-d)}
+.callout-warm p{color:var(--ink)}
+.callout-warm p strong{color:var(--yolk-d)}
+.menu-btn{position:fixed;bottom:18px;right:16px;width:56px;height:56px;border-radius:50%;background:var(--pan);color:var(--yolk);border:3px solid var(--yolk);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.3);cursor:pointer;z-index:100;line-height:1;transition:transform .25s}
+.menu-btn:active{transform:scale(.9)}
+.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;display:none;align-items:flex-end;justify-content:center}
+.menu-overlay.on{display:flex}
+.menu-panel{background:#fff;width:100%;max-width:480px;max-height:80vh;border-radius:24px 24px 0 0;padding:18px 16px 24px;overflow-y:auto;animation:slideup .3s}
+@keyframes slideup{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.menu-panel h4{font-size:16px;font-weight:900;color:var(--yolk-d);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.menu-panel h4 .close{font-size:22px;color:var(--pan);background:var(--yolk-l);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.menu-panel ol{list-style:none;counter-reset:c;padding:0}
+.menu-panel li{counter-increment:c;padding:0;border-bottom:1px dashed var(--white-edge)}
+.menu-panel li:last-child{border:none}
+.menu-panel a{display:block;font-size:13px;padding:11px 0 11px 32px;position:relative;color:var(--ink);text-decoration:none;font-weight:600;line-height:1.4}
+.menu-panel a::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:50%;transform:translateY(-50%);font-size:11px;font-weight:900;color:var(--yolk-d);background:var(--yolk-l);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+details{background:#fff;border-radius:16px;padding:0;margin-bottom:10px;border:2px solid var(--white-edge);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+summary{padding:13px;font-size:13px;font-weight:800;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▼";font-size:10px;color:var(--yolk-d);transition:transform .3s}
+details[open] summary::after{transform:rotate(180deg)}
+details .body{padding:0 13px 13px;font-size:12px;line-height:1.8;color:var(--sub)}
+.verdict{background:linear-gradient(135deg,var(--pan) 0%,#2D2D2D 100%);color:#FFF8E7;border-radius:20px;padding:18px;margin-top:18px;border:3px solid var(--yolk);position:relative;overflow:hidden}
+.verdict::before{content:"VERDICT";position:absolute;top:8px;right:12px;font-size:9px;letter-spacing:.3em;color:var(--yolk);font-weight:800;opacity:.6}
+.verdict h3{color:var(--yolk);font-size:17px;font-weight:900;margin-bottom:8px}
+.verdict p{font-size:13px;line-height:1.8;color:#FFF8E7;margin-bottom:8px}
+.verdict p strong{color:var(--yolk)}
+.verdict .pros,.verdict .cons{margin-top:10px;padding:10px;background:rgba(255,255,255,.05);border-radius:10px;font-size:12px;line-height:1.75}
+.verdict .pros strong{color:#7DD589}
+.verdict .cons strong{color:#FF8A65}
+.plan-card{background:#fff;border-radius:18px;padding:14px;margin-bottom:12px;border:2px solid var(--yolk);position:relative;box-shadow:0 4px 10px rgba(255,159,28,.15)}
+.plan-card.plan-pan{background:var(--pan);color:#FFF8E7;border-color:var(--pan-l)}
+.plan-card.plan-pan .plan-name{color:var(--yolk)}
+.plan-card.plan-pan .plan-desc{color:#FFF8E7}
+.plan-tag{display:inline-block;font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--yolk);color:var(--pan);letter-spacing:.05em;margin-bottom:6px}
+.plan-name{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:4px;line-height:1.3}
+.plan-name .price{color:var(--yolk-d);font-size:14px;display:block;margin-top:3px}
+.plan-desc{font-size:12.5px;color:var(--ink);line-height:1.75}
+.plan-spec{margin-top:8px;padding:8px;background:var(--white-edge);border-radius:10px;font-size:11.5px;line-height:1.6;color:var(--ink)}
+.plan-pan .plan-spec{background:rgba(255,197,40,.12);color:#FFF8E7}
+.plan-room-grid{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0 14px}
+.plan-room{background:#fff;border-radius:12px;padding:11px;border:2px solid var(--white-edge);font-size:12px;line-height:1.6}
+.plan-room .rname{font-weight:900;color:var(--yolk-d);font-size:13px;display:block;margin-bottom:3px}
+.plan-room .rspec{color:var(--sub);font-size:11px;display:block;margin-top:3px}
+.method-card{background:#fff;border-radius:18px;padding:16px;margin-bottom:10px;border:2px dashed var(--herb);box-shadow:0 3px 8px rgba(82,183,136,.1)}
+.method-card h4{font-size:14px;font-weight:900;color:var(--herb);margin-bottom:8px}
+.method-card .row{display:flex;gap:8px;margin-bottom:6px;font-size:12px;line-height:1.6}
+.method-card .row .ic{flex-shrink:0;width:22px;height:22px;background:var(--white-edge);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.method-card .row .ic.ok{background:#C7F0DB;color:#2D6A4F}
+.method-card .row .ic.ng{background:#FFDAD6;color:#B71C1C}
+.method-card .row .ic.up{background:#FFE0B2;color:#E65100}
+.full-review{background:#fff;border-radius:10px;padding:10px 12px;margin-bottom:6px;border:1px solid var(--white-edge);font-size:11.5px;line-height:1.7}
+.full-review .fr-meta{display:flex;gap:6px;align-items:center;margin-bottom:3px;flex-wrap:wrap}
+.full-review .fr-star{color:var(--yolk-d);font-weight:800;font-size:11px}
+.full-review .fr-name{font-weight:700;color:var(--ink);font-size:11px}
+.full-review .fr-body{color:var(--sub);line-height:1.65;font-size:11px}
+.full-review .fr-body em{font-style:normal;background:var(--yolk-l);padding:0 1px}
+.full-review.fr-1{border-left:3px solid #C62828}
+.full-review.fr-2{border-left:3px solid #FF7043}
+.full-review.fr-3{border-left:3px solid #52B788}
+.full-review.fr-4{border-left:3px solid #FFA000}
+.full-review.fr-5{border-left:3px solid #FF8F00}
+.fry{margin:30px 16px 0;padding:18px 16px 22px;background:var(--pan);border-radius:24px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.fry::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,197,40,.15) 0%,transparent 60%)}
+.fry h3{font-size:16px;font-weight:900;margin-bottom:8px;position:relative;color:var(--yolk)}
+.fry p{font-size:11px;line-height:1.7;opacity:.85;position:relative}
+
+
+html,body{overflow-x:clip}
+a{color:#875000;text-underline-offset:3px;overflow-wrap:anywhere}
+button,input,textarea{font:inherit}button{cursor:pointer}
+.hero .egg-wrap{max-width:240px}.hero .sub{margin-bottom:0}
+.hero .egg-stat.s1{right:0}.hero .egg-stat.s3{right:-2px}
+.hero h1 .accent{font-size:28px}.lead strong{color:#975400}
+.plan-name .price,.stat-strip .s .n,.chapter-num{color:#8a5100}
+.review-body{font-family:inherit;font-size:13px}.review-meta{padding-left:24px}
+.review-source{font-size:11px}.callout-warm h4,.callout-warm p strong{color:#7b4600}
+.proposal{display:inline-block;background:#FFE8DA;color:#9c3419;border:1px solid #f1c4af;border-radius:99px;padding:4px 12px;font-weight:800;font-size:12px}
+.quick-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.quick-links a{background:white;border:2px solid var(--white-edge);border-radius:30px;padding:7px 12px;font-weight:800;font-size:12px;text-decoration:none;color:var(--ink)}
+.progress-shell{background:#fff8e8;border-bottom:2px solid var(--white-edge);padding:9px 16px 7px}
+.progress-line{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;gap:6px;padding-right:64px}
+.progress-line button{border:1px solid #d8c58d;background:white;border-radius:20px;padding:7px 11px;font-size:12px;min-height:36px;color:var(--ink)}
+.progress-line button[aria-pressed="true"]{background:var(--pan);color:var(--yolk)}
+progress{display:block;width:100%;height:7px;margin-top:6px;accent-color:var(--herb)}
+section{scroll-margin-top:92px}.small{font-size:11.5px;color:var(--sub);line-height:1.75}
+.check-group summary{font-size:14px;min-height:52px}.group-count{margin-left:auto;font-size:11px;color:var(--sub);white-space:nowrap}
+.group-desc{padding:0 13px 12px;font-size:12px;color:var(--sub)}
+.check-row{display:flex;gap:11px;align-items:flex-start;padding:14px 13px;border-top:1px dashed #e5d9b5;cursor:pointer}
+.check-row input{width:23px;height:23px;flex:0 0 23px;margin-top:3px;accent-color:#367953}
+.check-text{min-width:0;display:block;flex:1}.item-title{display:block;font-size:14px;font-weight:800;line-height:1.5}
+.qty{display:block;font-size:13px;color:#885000;font-weight:800;margin-top:3px}
+.item-note{display:block;font-size:12px;color:var(--sub);line-height:1.7;margin-top:4px}
+.check-row.done{background:#edf6ef}.check-row.done .item-title{text-decoration:line-through;color:#487655}
+.owner{display:inline-block;background:#e8f5e9;color:#28633a;border-radius:5px;padding:1px 6px;font-size:10px;margin-left:3px}.opt{display:inline-block;font-size:10px;border:1px solid #ddd;border-radius:5px;padding:0 5px;color:#666;vertical-align:middle}
+.empty{padding:12px;font-size:13px;color:#367953}.check-row[hidden]{display:none}
+.link-buttons{display:grid;gap:8px;margin-top:12px}.link-buttons a{display:block;border:1px solid #d5c391;border-radius:10px;background:#fffaf0;padding:11px;font-size:12px;font-weight:700;text-decoration:none;color:#754300}
+.flow{display:grid;gap:8px;margin:12px 0}.flow p{padding:11px 12px;background:#fff;border:2px solid var(--white-edge);border-radius:12px;font-size:13px}
+.flow b{color:#875000}.budget{width:100%;border-collapse:collapse;font-size:12px}.budget td{padding:9px 3px;border-bottom:1px dashed #dfd1aa}.budget td:last-child{text-align:right;white-space:nowrap;font-weight:800}
+.budget .total td{font-size:15px;color:#814800;border-top:2px solid var(--yolk)}
+textarea{width:100%;min-height:130px;border:2px solid var(--white-edge);border-radius:12px;padding:12px;background:#fff;font-size:16px;color:var(--ink)}
+.utilities{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.utilities button{border:1px solid #cdbd92;border-radius:10px;background:white;padding:10px 12px;font-size:12px;min-height:44px}
+.source-list{padding-left:18px;font-size:12px}.source-list li{margin:8px 0}.fry a{color:var(--yolk-l)}
+.menu-panel h4 .close{border:0;cursor:pointer}.menu-panel a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #2678b1;outline-offset:3px}
+.noscript{padding:12px;background:#fff}.save-status{font-size:10px;color:var(--sub);margin-top:3px}
+.decision-grid{display:grid;gap:14px}.decision-grid .plan-card{margin:0}.decision-price{font-size:22px;font-weight:800;color:#875000;margin:10px 0}
+.reference-wrap{margin:18px 16px;border:1px solid #dbc994;border-radius:16px;background:#fffaf0;overflow:hidden}
+.reference-wrap>summary{padding:18px 14px;min-height:60px;font-weight:800;cursor:pointer}.reference-wrap>summary small{display:block;font-size:12px;font-weight:400;color:var(--sub);margin-top:5px}
+.reference-wrap section{padding-left:14px;padding-right:14px}.reference-wrap .chapter-num{display:none}
+.reference-wrap .sec-title{font-size:20px}.choice-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px;margin:16px 0}
+.choice-table th,.choice-table td{padding:10px 6px;vertical-align:top;border-bottom:1px solid #dfd1aa;text-align:left;overflow-wrap:anywhere}.choice-table th:first-child{width:20%}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+@media print{body{max-width:none;background:white;padding:0}.progress-shell,.menu-btn,.menu-overlay,.utilities,.quick-links{display:none!important}section{padding:12px}.hero .egg-wrap{display:none}details{break-inside:auto}.check-row{break-inside:avoid}.check-row[hidden]{display:flex}.callout,.fry{background:white;color:black}.callout p,.fry p{color:black}}
+
+.rule{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.06);border-radius:12px;padding:10px;margin-bottom:8px;position:relative}
+.rule .no{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--yolk);color:var(--pan);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.rule p{margin:0!important}
+.timeline{list-style:none;padding:0;margin:8px 0 14px;position:relative}
+.timeline::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:3px;background:var(--yolk-l);border-radius:3px}
+.timeline li{position:relative;padding:0 0 12px 44px}
+.timeline li::before{content:"";position:absolute;left:6px;top:4px;width:21px;height:21px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,var(--yolk) 13%,var(--yolk-d) 100%);box-shadow:0 2px 3px rgba(0,0,0,.15)}
+.timeline a{display:block;background:#fff;border-radius:14px;padding:10px 12px;border:2px solid var(--white-edge);text-decoration:none;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.04)}
+.timeline .t{font-size:11px;font-weight:800;color:var(--yolk-d);letter-spacing:.05em}
+.timeline .n{display:block;font-size:15px;font-weight:900;line-height:1.4}
+.timeline .d{display:block;font-size:12px;color:var(--sub);line-height:1.6}
+.ilist{list-style:none;padding:0;margin:0 0 10px}
+.ilist li{background:#fff;border-radius:12px;padding:10px 12px 10px 38px;margin-bottom:7px;border:2px solid var(--white-edge);font-size:13px;line-height:1.7;position:relative}
+.ilist li::before{content:"";position:absolute;left:12px;top:14px;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,#fff 12%,var(--yolk) 13%,var(--yolk-d) 100%)}
+.ilist li strong{font-weight:900}
+.ilist li .note{display:block;font-size:11.5px;color:var(--sub)}
+.steps{counter-reset:st;list-style:none;padding:0;margin:0 0 12px}
+.steps li{counter-increment:st;position:relative;padding:8px 0 8px 40px;font-size:13px;line-height:1.7;border-bottom:1px dashed var(--white-edge)}
+.steps li:last-child{border:none}
+.steps li::before{content:counter(st);position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;background:var(--pan);color:var(--yolk);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:13px}
+.graph-box{background:#fff;border-radius:16px;padding:10px;border:2px solid var(--white-edge);margin:10px 0 14px}
+.graph-box svg{width:100%;height:auto;display:block}
+.graph-box .cap{font-size:11px;color:var(--sub);text-align:center;margin-top:4px}
+.small{font-size:11.5px;color:var(--sub);line-height:1.7}
+.tool{background:var(--pan);color:#FFF8E7;border-radius:20px;padding:16px;margin:12px 0 16px;border:3px solid var(--yolk);position:relative;overflow:hidden}
+.tool h4{color:var(--yolk);font-size:15px;font-weight:900;margin-bottom:8px}
+.tool .hint{font-size:11.5px;color:#E8DCC0;line-height:1.6;margin-bottom:10px}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.seg button{flex:1;min-width:0;white-space:nowrap;font:inherit;font-size:12px;font-weight:800;padding:9px 4px;border-radius:999px;border:2px solid var(--yolk);background:transparent;color:var(--yolk);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--yolk);color:var(--pan)}
+.big-btn{display:block;width:100%;font:inherit;font-size:16px;font-weight:900;padding:13px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--yolk) 0%,var(--yolk-d) 100%);color:var(--pan);cursor:pointer;box-shadow:0 4px 10px rgba(255,159,28,.35);margin-bottom:10px}
+.big-btn:active{transform:scale(.97)}
+.sub-btns{display:flex;gap:6px}
+.sub-btns button{flex:1;font:inherit;font-size:12px;font-weight:700;padding:8px;border-radius:999px;border:1px solid #6A6A6A;background:transparent;color:#FFF8E7;cursor:pointer}
+.cards{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:10px}
+.qcard{background:#FFFBEE;color:var(--ink);border-radius:16px;padding:16px 14px;min-height:84px;font-size:16px;font-weight:900;line-height:1.55;display:flex;flex-direction:column;justify-content:center;position:relative;animation:pop .35s ease-out}
+.qcard .lv{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--yolk-d);margin-bottom:4px}
+.qcard.lv-mid .lv{color:var(--herb)}
+.qcard.lv-deep .lv{color:var(--bacon)}
+.qcard.empty{background:rgba(255,255,255,.08);color:#CFC4A8;font-size:13px;font-weight:700;animation:none}
+@keyframes pop{0%{transform:scale(.85) rotate(-2deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+.left{font-size:11px;color:#CFC4A8;text-align:right;margin-top:6px}
+.timer-face{font-size:56px;font-weight:900;text-align:center;color:var(--yolk);font-feature-settings:"tnum";line-height:1.1;margin:4px 0 10px;letter-spacing:.02em}
+.timer-face.over{color:#FF6B6B;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.35}}
+.tool.flash{animation:flash .6s 3}
+@keyframes flash{50%{background:#7A1F1F}}
+.qlist{list-style:none;padding:0;margin:0}
+.qlist li{padding:7px 0 7px 18px;border-bottom:1px dashed var(--white-edge);position:relative;font-size:12.5px;line-height:1.6;color:var(--ink)}
+.qlist li:last-child{border:none}
+.qlist li::before{content:"・";position:absolute;left:4px;color:var(--yolk-d);font-weight:900}
+.prep{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 12px}
+.prep div{background:#fff;border-radius:12px;padding:10px;border:2px solid var(--white-edge);font-size:12px;line-height:1.5;text-align:center;font-weight:700}
+.prep div b{display:block;font-size:22px;margin-bottom:2px}
+footer.foot{text-align:center;font-size:11px;color:var(--sub);padding:10px 16px 30px}
+@media print{.menu-btn,.menu-overlay,.tool{display:none!important}}
+</style></head>
+<body>
+<header class="hero"><span class="badge-top">SUNNY SIDE UP '90</span>
+<h1>Sunny合宿・夜の部<span class="accent">あれから何年？近況報告会</span></h1>
+<p class="sub">2026年11月7日（土）夜・ラフォーレ修善寺<br>鍋と刺し盛をつつきながら、<span class="key">これまでの人生と近況</span>を面白おかしく報告し合う会です。</p>
+<div class="egg-wrap" aria-hidden="true"><svg class="egg-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="white" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#FFFEF0"/><stop offset="70%" stop-color="#FFF8E0"/><stop offset="100%" stop-color="#FFEFCC"/></radialGradient>
+        <radialGradient id="yolk" cx="40%" cy="35%" r="60%"><stop offset="0%" stop-color="#FFE680"/><stop offset="40%" stop-color="#FFC528"/><stop offset="100%" stop-color="#FF8F00"/></radialGradient>
+        <filter id="bumpy"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+      </defs>
+      <path d="M 60,170 C 50,110 110,55 175,55 C 240,55 290,90 295,150 C 300,205 275,265 220,285 C 175,300 115,295 80,260 C 50,225 65,205 60,170 Z" fill="url(#white)" filter="url(#bumpy)"/>
+      <ellipse cx="240" cy="100" rx="35" ry="22" fill="url(#white)" opacity=".9" transform="rotate(-15 240 100)"/>
+      <ellipse cx="85" cy="245" rx="32" ry="20" fill="url(#white)" opacity=".9" transform="rotate(20 85 245)"/>
+      <ellipse cx="165" cy="160" rx="78" ry="73" fill="url(#yolk)"/>
+      <ellipse cx="140" cy="135" rx="22" ry="14" fill="#FFFCE0" opacity=".55"/>
+      <ellipse cx="135" cy="128" rx="9" ry="5" fill="#FFFEF5" opacity=".8"/>
+      <circle cx="190" cy="190" r="2" fill="#1A1A1A"/><circle cx="100" cy="120" r="1.5" fill="#1A1A1A"/><circle cx="260" cy="200" r="1.8" fill="#1A1A1A"/><circle cx="220" cy="260" r="1.3" fill="#1A1A1A"/><circle cx="70" cy="180" r="1.5" fill="#1A1A1A"/>
+    </svg>
+<div class="egg-stat s1"><span class="n">6人</span><span class="l">久しぶりに集合</span></div>
+<div class="egg-stat s2"><span class="n">11 / 7</span><span class="l">土曜日の夜</span></div>
+<div class="egg-stat s3"><span class="n">約2.5時間</span><span class="l">4部構成</span></div></div>
+<nav class="quick-links" aria-label="すぐ使う"><a href="#rules">3つのルール</a><a href="#flow">今夜の流れ</a><a href="#draw">お題くじを引く</a><a href="#timer">5分タイマー</a></nav>
+</header>
+<noscript><p class="noscript">お題くじ・タイマー・目次メニューにはJavaScriptが必要です。お題の一覧はそのまま読めます。</p></noscript>
+<main>
+
+<section id="rules"><span class="chapter-num">CHAPTER 00</span><h2 class="sec-title"><span class="ic">🍳</span>はじめる前に、3つのルール</h2>
+<p class="lead">3年ぶりの人もいれば、10年以上ぶりの人もいます。いいことも悪いことも話せる仲間ですが、<strong>話したくないことは話さなくていい</strong>。そのための約束です。</p>
+<div class="callout">
+<div class="rule"><span class="no">1</span><p><strong>パスは何回でもOK。</strong>「それはパス！」と言われたら全員で拍手して流します。パスを気まずくせず、笑いにしてしまいましょう。</p></div>
+<div class="rule"><span class="no">2</span><p><strong>話す中身は本人が決める。</strong>同じお題でも、仕事の話にするか体調の話にするか、どこまで話すかは本人次第です。</p></div>
+<div class="rule"><span class="no">3</span><p><strong>「もっと聞かせて」はOK、詰めるのはナシ。</strong>「なんで？」「結局どうなったの？」と追い込まない。結婚・子ども・離婚・仕事・年収・健康は、本人が自分から話したときだけ広げます。</p></div>
+</div>
+</section>
+
+<section id="flow"><span class="chapter-num">CHAPTER 01</span><h2 class="sec-title"><span class="ic">⏰</span>今夜の流れ（全4部）</h2>
+<ol class="timeline">
+<li><a href="#part1"><span class="t">第1部・20〜30分</span><span class="n">大学時代の答え合わせ</span><span class="d">第一印象・あの事件・あの頃の予想。昔話で緊張をほぐします。</span></a></li>
+<li><a href="#part2"><span class="t">第2部・約40分（1人5分）</span><span class="n">人生グラフで近況報告</span><span class="d">卒業から今までを波線で描いて、一人ずつ発表。今夜のメインです。</span></a></li>
+<li><a href="#part3"><span class="t">第3部・30〜40分</span><span class="n">お題くじ＆「この中で一番〜な人」</span><span class="d">スマホでくじを引いて、話を広げます。</span></a></li>
+<li><a href="#part4"><span class="t">第4部・10〜15分</span><span class="n">次に会うまでの宣言</span><span class="d">一人一言の宣言と、隣の人への一言。最後に集合写真。</span></a></li>
+</ol>
+<p class="small">時間はあくまで目安です。盛り上がったところは延ばし、眠そうな人が出てきたら早めに締めます。</p>
+</section>
+
+<section id="part1"><span class="chapter-num">CHAPTER 02 ／ 第1部</span><h2 class="sec-title"><span class="ic">🎾</span>大学時代の答え合わせ</h2>
+<p class="lead">昔の思い出なら、何年ぶりでも全員が同じ立場で話せます。まずはここから。</p>
+<ul class="ilist">
+<li><strong>第一印象の答え合わせ</strong><span class="note">「入部したとき、◯◯のことどう思ってた？」を一人ずつ。「えっ、そう見えてたの？」となるのが盛り上がりどころです。</span></li>
+<li><strong>サークルの事件簿</strong><span class="note">合宿・試合・飲み会の「あの事件」を出し合います。人によって記憶が違うのが面白いところ。</span></li>
+<li><strong>あの頃の予想</strong><span class="note">「当時、誰が一番早く結婚すると思ってた？」「誰が一番出世すると思ってた？」。予想を言い合うだけで、現実との比べ合いはしません。</span></li>
+</ul>
+</section>
+
+<section id="part2"><span class="chapter-num">CHAPTER 03 ／ 第2部</span><h2 class="sec-title"><span class="ic">📈</span>人生グラフで近況報告</h2>
+<p class="lead">卒業から今までを、<strong>一本の波線</strong>で描いて見せ合います。空白の何年分を、一気に共有するための仕掛けです。</p>
+<h3 class="sub-title">やり方</h3>
+<ol class="steps">
+<li>紙に横線を1本引きます。左端が「卒業」、右端が「今」です。</li>
+<li>気分のよかった時期は上に、しんどかった時期は下に、波線で描きます（5分）。</li>
+<li>山や谷に短い見出しを書き込みます（例：「転職」「沖縄に転勤」「ゴルフに目覚める」）。</li>
+<li>一人5分で、グラフを見せながら話します。下のタイマーを使ってください。</li>
+<li>終わったら、ほかの人が1〜2個だけ質問します。</li>
+</ol>
+<div class="graph-box"><svg viewBox="0 0 340 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="人生グラフの記入例">
+<rect x="0" y="0" width="340" height="170" fill="#FFFDF5" rx="10"/>
+<line x1="30" y1="85" x2="325" y2="85" stroke="#D9C9A0" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="6" y="30" font-size="10" fill="#E07A00" font-weight="700">上</text>
+<text x="6" y="150" font-size="10" fill="#5C5C5C" font-weight="700">下</text>
+<path d="M30,85 C55,40 75,40 95,55 C115,70 120,120 145,128 C170,136 180,80 205,62 C230,44 245,95 265,98 C285,101 300,45 325,32" fill="none" stroke="#FF9F1C" stroke-width="4" stroke-linecap="round"/>
+<g font-size="10" font-weight="700" fill="#1A1A1A">
+<circle cx="72" cy="44" r="4" fill="#FF9F1C"/><text x="52" y="34">就職</text>
+<circle cx="145" cy="128" r="4" fill="#5C5C5C"/><text x="122" y="150">（書かない谷）</text>
+<circle cx="208" cy="60" r="4" fill="#FF9F1C"/><text x="190" y="50">転職</text>
+<circle cx="265" cy="98" r="4" fill="#FF9F1C"/><text x="244" y="118">腰を痛める</text>
+<circle cx="322" cy="33" r="4" fill="#FF9F1C"/><text x="316" y="22" text-anchor="end">ゴルフに目覚める</text>
+</g>
+<text x="24" y="102" font-size="10" fill="#5C5C5C">卒業</text>
+<text x="310" y="102" font-size="10" fill="#5C5C5C">今</text>
+</svg><p class="cap">記入例（架空の人です）。谷に見出しを書かなくてもかまいません。</p></div>
+<div class="callout callout-warm"><h4>ここがポイント</h4><p><strong>何を描くか、どこまで書くかは本人が決められます。</strong>話したくない出来事は「谷」にだけして、見出しを書かなければそれで十分です。谷の話が出ても、そのあとグラフが上がっていれば「どう持ち直したか」の話になり、湿っぽくなりすぎません。</p><p><strong>発表の順番はくじ引き</strong>で。久しぶりの人をいきなり一番手にすると、注目が集まりすぎて負担になります。</p></div>
+
+<div class="tool" id="timer"><h4>⏱ 持ち時間タイマー</h4>
+<p class="hint">時間になると画面が赤く点滅し、スマホが震えます（対応機種のみ）。</p>
+<div class="seg" id="tpreset"><button type="button" data-sec="300" aria-pressed="true">5分</button><button type="button" data-sec="180" aria-pressed="false">3分</button><button type="button" data-sec="60" aria-pressed="false">1分</button></div>
+<div class="timer-face" id="tface" aria-live="polite">5:00</div>
+<button type="button" class="big-btn" id="tstart">スタート</button>
+<div class="sub-btns"><button type="button" id="treset">リセット</button></div>
+</div>
+</section>
+
+<section id="part3"><span class="chapter-num">CHAPTER 04 ／ 第3部</span><h2 class="sec-title"><span class="ic">🎴</span>お題くじ</h2>
+<p class="lead">自分の番では<strong>2枚引いて、話しやすいほうを選ぶ</strong>ルールです。どちらも嫌なら、もちろんパス。最初は「軽め」から始めて、場が温まったら「中くらい」「深め」を混ぜていきます。</p>
+
+<div class="tool" id="draw"><h4>🎴 お題くじ（2枚引く）</h4>
+<p class="hint">一度出たお題は、全部出し切るまで出ません。引いた人は2枚のうち1つを選んで話します。</p>
+<div class="seg" id="lvsel"><button type="button" data-lv="light" aria-pressed="true">軽め</button><button type="button" data-lv="mid" aria-pressed="false">中くらい</button><button type="button" data-lv="deep" aria-pressed="false">深め</button><button type="button" data-lv="mix" aria-pressed="false">ごちゃ混ぜ</button></div>
+<div class="cards" id="cards" aria-live="polite"><div class="qcard empty">下のボタンでお題を2枚引きます</div></div>
+<button type="button" class="big-btn" id="drawbtn">2枚引く</button>
+<div class="sub-btns"><button type="button" id="drawreset">出たお題をリセット</button></div>
+<p class="left" id="left"></p>
+</div>
+
+<details><summary>軽め：誰でも答えやすい（10題）</summary><div class="body"><ul class="qlist"><li>最近いちばんお金を使ったもの</li><li>いまハマっていること</li><li>最近「年を取ったな」と感じた瞬間</li><li>スマホの写真の最新5枚を見せて解説</li><li>今もテニスしてる？　最後にラケットを握ったのはいつ？</li><li>自分の休日を30秒で実況中継</li><li>最近いちばん笑ったこと</li><li>最近おいしかったもの・店</li><li>いまの朝のルーティン</li><li>最近買ってよかったもの</li></ul></div></details>
+<details><summary>中くらい：笑える失敗談が出やすい（8題）</summary><div class="body"><ul class="qlist"><li>この10年でいちばんの「やらかし」</li><li>仕事でいちばん理不尽だった出来事</li><li>人生でいちばん意外だった転機</li><li>今の自分に肩書きをつけるなら？</li><li>大学時代の自分に一言だけ言えるなら？</li><li>学生時代に思い描いていた今と、実際の今の違い</li><li>いまだに引きずっている小さな後悔</li><li>最近ちょっと自慢したいこと</li></ul></div></details>
+<details><summary>深め：終盤用・パス前提（6題）</summary><div class="body"><ul class="qlist"><li>今だから言える、サークル時代の秘密（恋愛話も含む）</li><li>いちばんしんどかった時期と、どうやって抜け出したか</li><li>この先10年で、本気でやりたいこと</li><li>ここにいる誰かに、昔言えなかった「ありがとう」か「ごめん」</li><li>いま、いちばん大事にしているもの</li><li>人生で「あの選択でよかった」と思えること</li></ul></div></details>
+
+<h3 class="sub-title" id="vote">盛り上げ用：「この中で一番〜な人」投票</h3>
+<p class="lead">「せーの」で一斉に指をさします。<strong>ほめる方向のお題だけ</strong>にしておけば、誰も傷つきません。</p>
+<ul class="ilist"><li>この中で一番、大学時代から変わってない人</li><li>一番、仕事で頼りにされていそうな人</li><li>一番、無人島でも生き残れそうな人</li><li>一番、60歳になってもモテていそうな人</li><li>一番、今もテニスがうまそうな人</li><li>一番、急に連絡しても来てくれそうな人</li></ul>
+<p class="small">「一番太った人」「一番老けた人」のような、いじる方向のお題は今夜はナシで。</p>
+</section>
+
+<section id="part4"><span class="chapter-num">CHAPTER 05 ／ 第4部</span><h2 class="sec-title"><span class="ic">🥂</span>締め：次に会うまでの宣言</h2>
+<ul class="ilist">
+<li><strong>次に会うまでの宣言</strong><span class="note">「次に会うときまでに◯◯する」を一人一言。また集まる口実にもなります。</span></li>
+<li><strong>隣の人への一言リレー</strong><span class="note">時計回りに、隣の人へ「今日話して思ったこと」を一言ずつ。</span></li>
+<li><strong>集合写真</strong><span class="note">大学時代の写真があれば、同じ並び・同じポーズで撮り直すと良い記念になります。</span></li>
+</ul>
+</section>
+
+<section id="tips"><span class="chapter-num">CHAPTER 06</span><h2 class="sec-title"><span class="ic">🧂</span>準備と、回し方のコツ</h2>
+<h3 class="sub-title">準備するもの</h3>
+<div class="prep"><div><b>📝</b>紙（A4やコピー用紙）6枚以上</div><div><b>🖊</b>ペン 6本</div><div><b>📱</b>このページ（くじ・タイマー）</div><div><b>📷</b>大学時代の写真（あれば）</div></div>
+<h3 class="sub-title">回し方のコツ</h3>
+<ul class="ilist">
+<li><strong>持ち時間はタイマーで区切る</strong><span class="note">よく話す人と話さない人の差が出にくくなります。</span></li>
+<li><strong>重い話が出たら、無理に明るくしない</strong><span class="note">「話してくれてありがとう」で受け止めてから、次の人へ移れば十分です。</span></li>
+<li><strong>話していない人には、具体的なお題を振る</strong><span class="note">「最近どう？」より「最近何にお金使った？」のほうが答えやすいです。</span></li>
+<li><strong>深めのお題は、全員が起きているうちに</strong><span class="note">終盤は眠くなる人も出ます。お酒が進みすぎる前がちょうどいいです。</span></li>
+</ul>
+</section>
+</main>
+<footer class="foot">Sunny合宿 2026・夜の部 ／ 楽しい夜になりますように 🍳</footer>
+
+<button type="button" class="menu-btn" id="menu-button" aria-label="目次を開く" aria-expanded="false" aria-controls="menu">≡</button>
+<div class="menu-overlay" id="menu" role="dialog" aria-modal="true" aria-label="目次"><div class="menu-panel"><h4>目次<button type="button" class="close" id="menu-close" aria-label="目次を閉じる">×</button></h4>
+<ol><li><a href="#rules">はじめる前に、3つのルール</a></li><li><a href="#flow">今夜の流れ（全4部）</a></li><li><a href="#part1">第1部：大学時代の答え合わせ</a></li><li><a href="#part2">第2部：人生グラフで近況報告</a></li><li><a href="#timer">持ち時間タイマー</a></li><li><a href="#draw">第3部：お題くじ</a></li><li><a href="#vote">「この中で一番〜な人」投票</a></li><li><a href="#part4">第4部：締め</a></li><li><a href="#tips">準備と、回し方のコツ</a></li></ol></div></div>
+
+<script>
+(()=>{
+ const Q={light:["最近いちばんお金を使ったもの", "いまハマっていること", "最近「年を取ったな」と感じた瞬間", "スマホの写真の最新5枚を見せて解説", "今もテニスしてる？　最後にラケットを握ったのはいつ？", "自分の休日を30秒で実況中継", "最近いちばん笑ったこと", "最近おいしかったもの・店", "いまの朝のルーティン", "最近買ってよかったもの"],mid:["この10年でいちばんの「やらかし」", "仕事でいちばん理不尽だった出来事", "人生でいちばん意外だった転機", "今の自分に肩書きをつけるなら？", "大学時代の自分に一言だけ言えるなら？", "学生時代に思い描いていた今と、実際の今の違い", "いまだに引きずっている小さな後悔", "最近ちょっと自慢したいこと"],deep:["今だから言える、サークル時代の秘密（恋愛話も含む）", "いちばんしんどかった時期と、どうやって抜け出したか", "この先10年で、本気でやりたいこと", "ここにいる誰かに、昔言えなかった「ありがとう」か「ごめん」", "いま、いちばん大事にしているもの", "人生で「あの選択でよかった」と思えること"]};
+ const NAME={light:'軽め',mid:'中くらい',deep:'深め'};
+ const KEY='sunny2026-night-used';
+ let used={light:[],mid:[],deep:[]};
+ try{const v=JSON.parse(localStorage.getItem(KEY));if(v&&v.light)used=v;}catch(e){}
+ function save(){try{localStorage.setItem(KEY,JSON.stringify(used));}catch(e){}}
+ let lv='light';
+ const cards=document.getElementById('cards'), left=document.getElementById('left');
+ function pool(l){return Q[l].map((t,i)=>[l,i]).filter(([l2,i])=>!used[l2].includes(i));}
+ function remain(){
+  const ls=lv==='mix'?['light','mid','deep']:[lv];
+  left.textContent='まだ出ていないお題：'+ls.map(l=>NAME[l]+' '+pool(l).length+'題').join('・');
+ }
+ document.querySelectorAll('#lvsel button').forEach(b=>b.addEventListener('click',()=>{
+  lv=b.dataset.lv;document.querySelectorAll('#lvsel button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));remain();
+ }));
+ document.getElementById('drawbtn').addEventListener('click',()=>{
+  const ls=lv==='mix'?['light','mid','deep']:[lv];
+  let p=[].concat(...ls.map(pool));
+  if(p.length<2){ls.forEach(l=>used[l]=[]);p=[].concat(...ls.map(pool));}
+  const pick=[];
+  while(pick.length<2&&p.length){pick.push(p.splice(Math.floor(Math.random()*p.length),1)[0]);}
+  pick.forEach(([l,i])=>used[l].push(i));save();
+  cards.innerHTML=pick.map(([l,i])=>'<div class="qcard lv-'+l+'"><span class="lv">'+NAME[l]+'</span>'+Q[l][i]+'</div>').join('');
+  remain();
+ });
+ document.getElementById('drawreset').addEventListener('click',()=>{
+  if(confirm('出たお題の記録を消して、全部のお題を引ける状態に戻しますか？')){used={light:[],mid:[],deep:[]};save();cards.innerHTML='<div class="qcard empty">下のボタンでお題を2枚引きます</div>';remain();}
+ });
+ remain();
+
+ // タイマー
+ const face=document.getElementById('tface'), tool=document.getElementById('timer'), sb=document.getElementById('tstart');
+ let total=300, endAt=0, rest=300, tid=null, alerted=false;
+ function fmt(s){const neg=s<0;s=Math.abs(s);return (neg?'-':'')+Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+ function draw(){face.textContent=fmt(rest);face.classList.toggle('over',rest<=0);}
+ function tick(){
+  rest=Math.ceil((endAt-Date.now())/1000);draw();
+  if(rest<=0&&!alerted){alerted=true;tool.classList.remove('flash');void tool.offsetWidth;tool.classList.add('flash');try{navigator.vibrate&&navigator.vibrate([400,200,400,200,400]);}catch(e){}}
+ }
+ function stop(){clearInterval(tid);tid=null;sb.textContent='再開';}
+ sb.addEventListener('click',()=>{
+  if(tid){stop();return;}
+  endAt=Date.now()+rest*1000;tid=setInterval(tick,250);sb.textContent='一時停止';tick();
+ });
+ function reset(){clearInterval(tid);tid=null;rest=total;alerted=false;sb.textContent='スタート';tool.classList.remove('flash');draw();}
+ document.getElementById('treset').addEventListener('click',reset);
+ document.querySelectorAll('#tpreset button').forEach(b=>b.addEventListener('click',()=>{
+  total=+b.dataset.sec;document.querySelectorAll('#tpreset button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));reset();
+ }));
+ draw();
+
+ // 目次メニュー
+ const overlay=document.getElementById('menu'), menuButton=document.getElementById('menu-button');
+ function closeMenu(){overlay.classList.remove('on');menuButton.setAttribute('aria-expanded','false');}
+ menuButton.addEventListener('click',()=>{overlay.classList.add('on');menuButton.setAttribute('aria-expanded','true');document.getElementById('menu-close').focus();});
+ document.getElementById('menu-close').addEventListener('click',closeMenu);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)closeMenu();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.getElementById(a.getAttribute('href').slice(1));if(t){e.preventDefault();closeMenu();t.scrollIntoView({behavior:'smooth',block:'start'});}}));
+})();
+</script></body></html>
